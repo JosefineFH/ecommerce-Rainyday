@@ -1,0 +1,17 @@
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header img{
+    max-width: 100px;
+}
+nav {
+    display: none;
+}
+#hamburger-menu {
+    display: none;
+}
+#hamburger-menu:checked ~ nav {
+    display: block;
+}
