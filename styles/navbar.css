@@ -29,10 +29,12 @@ ion-icon {
     font-size: 40px;
     color:#72828C;    
   }
+  header label{
+    position: relative;
+    z-index: 99; 
+  }
 #dropdown-menu{
     display: none;
-    position: relative;
-    z-index: 99;
 }
 #dropdown-menu:checked ~ nav {
     display: block;
