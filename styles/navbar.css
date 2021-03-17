@@ -1,5 +1,4 @@
-<<<<<<< Updated upstream
-=======
+
 
 @font-face {
     font-family : "Naratif-Bold";
@@ -12,12 +11,19 @@ body{
 /* -------------------------------------------------------------------------- */
 /*                                    Menu                                    */
 /* -------------------------------------------------------------------------- */
->>>>>>> Stashed changes
+
 header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-<<<<<<< Updated upstream
+    background-color: rgba(255, 255, 255, 0.89);
+    padding: 1rem 2rem 0;
+    box-shadow: 0pt 3pt 6pt #00000029;
+    position: sticky;
+    top: 0;
+    height: 48pt;
+    z-index: auto;
+
 }
 header img{
     max-width: 100px;
@@ -31,15 +37,7 @@ nav {
 #hamburger-menu:checked ~ nav {
     display: block;
 }
-=======
-    background-color: rgba(255, 255, 255, 0.89);
-    padding: 1rem 2rem 0;
-    box-shadow: 0pt 3pt 6pt #00000029;
-    position: sticky;
-    top: 0;
-    height: 48pt;
-    z-index: auto;
-}
+
 header img{
     height: 50px;
 }
