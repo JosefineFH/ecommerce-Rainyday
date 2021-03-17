@@ -1,5 +1,4 @@
 
-
 @font-face {
     font-family : "Naratif-Bold";
     src : url('/fonts/Akufadhl\ -\ Naratif\ Condensed\ Bold\ Italic.otf');
@@ -11,7 +10,6 @@ body{
 /* -------------------------------------------------------------------------- */
 /*                                    Menu                                    */
 /* -------------------------------------------------------------------------- */
-
 header{
     display: flex;
     align-items: center;
@@ -23,21 +21,7 @@ header{
     top: 0;
     height: 48pt;
     z-index: auto;
-
 }
-header img{
-    max-width: 100px;
-}
-nav {
-    display: none;
-}
-#hamburger-menu {
-    display: none;
-}
-#hamburger-menu:checked ~ nav {
-    display: block;
-}
-
 header img{
     height: 50px;
 }
@@ -47,7 +31,8 @@ ion-icon {
   }
 #dropdown-menu{
     display: none;
-    
+    position: relative;
+    z-index: 99;
 }
 #dropdown-menu:checked ~ nav {
     display: block;
@@ -60,7 +45,7 @@ nav{
     top: 0;
     z-index: 50;
     right: 0px;
-    background-color: #FFFFFFE6;
+    background-color: #fffffffa;
     overflow: hidden;
 }
 nav ul{
@@ -69,6 +54,7 @@ nav ul{
 nav li {
     padding: 20px 0;
     text-align: center;
+    list-style: none;
 }
 nav a{
     color: #72828C;
@@ -82,4 +68,3 @@ nav a{
 /* -------------------------------------------------------------------------- */
 /*                               Welcome Section                              */
 /* -------------------------------------------------------------------------- */
->>>>>>> Stashed changes

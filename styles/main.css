@@ -1,0 +1,27 @@
+@font-face {
+    font-family: "Naratif-Bold";
+    src: url('/fonts/Akufadhl\ -\ Naratif\ Condensed\ Bold\ Italic.otf');
+}
+main{
+    top: -100px;
+    position: relative;
+    z-index: -1;
+}
+.header-image{
+    background-image: url('/images/headerIamge.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: bottom;
+    min-height: 70vh;
+    text-align: center;
+}
+.header-image h1{
+    font-family: "Naratif-Bold";
+    text-transform: uppercase;
+    font-size: 30pt;
+    position: relative;
+    top: 8rem;
+    color: #1E4959;
+    text-shadow: 1pt 1pt 2pt#FFFFFF;
+}
