@@ -2,8 +2,9 @@
     font-family: "Naratif-Bold";
     src: url('/fonts/Akufadhl\ -\ Naratif\ Condensed\ Bold\ Italic.otf');
 }
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 main{
-    top: -100px;
+    top: -7rem;
     position: relative;
     z-index: -1;
 }
@@ -13,15 +14,61 @@ main{
     background-repeat: no-repeat;
     background-position-x: center;
     background-position-y: bottom;
-    min-height: 70vh;
+    min-height: 306px;
     text-align: center;
 }
 .header-image h1{
+    font-family: "Naratif-Bold", sans-serif;
+    text-transform: uppercase;
+    font-size: 50px;
+    position: relative;
+    top: 9rem;
+    color: #1E4959;
+    text-shadow: 0px 0px 13px#FFFFFF;
+}
+.brand_section{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+margin-bottom: 4rem;
+overflow-x: hidden;
+}
+
+.brand_section img{
+    height: 40px;
+    padding: 0 10px;
+}
+.product-cards{
+    /* border: solid orange 1px; */
+    display: flex;
+    justify-content: space-between;
+
+    color: #313C40;
+}
+.product-cards h2{
+    font-family: "Naratif-Bold", sans-serif;
+    
+}
+.product-cards p{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+}
+.jacket_section h1{
+    text-align: center;
     font-family: "Naratif-Bold";
     text-transform: uppercase;
-    font-size: 30pt;
-    position: relative;
-    top: 8rem;
-    color: #1E4959;
-    text-shadow: 1pt 1pt 2pt#FFFFFF;
+    font-size: 35px;
+    color: #313C40;
+    letter-spacing: 2px;
+}
+.product-card img{
+    height: 160px;
+    margin: 40px;
+}
+.product-card{
+    /* border: solid #1E4959 1px; */
+
+    display: block;
+    text-align: center;
 }
