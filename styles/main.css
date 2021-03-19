@@ -194,7 +194,6 @@ footer img {
 /* --------------------------- media query tablet --------------------------- */
 @media only screen and (min-width: 600px) {
   .product-card {
-    flex: 1 1 100px;
   }
   .header-image {
     top: -5pc;
@@ -229,6 +228,39 @@ footer img {
   .mountain-img {
     height: 44pc;
     background-position: center;
+  }
+  .jacket_section,
+  .newsletter {
+    max-width: none;
+    box-sizing: border-box;
+    justify-content: center;
+  }
+  .product-card {
+    width: 18pc;
+    margin: 0 10px;
+  }
+  .product-cards {
+    justify-content: center;
+    margin: 0 2pc;
+  }
+  .product-card img {
+    height: 17pc;
+  }
+  .product-cards h2 {
+    font-size: 2rem;
+  }
+  .product-cards p {
+    font-size: 20px;
+  }
+  .disounct_icon img {
+    height: 56px;
+    margin-left: 47px;
+  }
+  .newsletter {
+    margin: 0 20%;
+  }
+  .newsletter__title {
+    font-size: 3pc;
   }
 }
 
