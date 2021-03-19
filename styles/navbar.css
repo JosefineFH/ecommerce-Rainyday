@@ -106,7 +106,6 @@ nav a {
     text-decoration: underline;
   }
   .menu-item {
-    /* display: inline-flex; */
     display: inherit;
   }
   .shopping-cart {
