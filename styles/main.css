@@ -38,7 +38,7 @@
 }
 
 .brand_section img {
-  height: 2pc;
+  height: 19px;
   padding: 0 10px;
 }
 .product-cards {
@@ -200,6 +200,9 @@ footer img {
 @media only screen and (min-width: 600px) {
   .header-image h1 {
     font-size: 60px;
+  }
+  .brand_section img {
+    height: 50px;
   }
   .footer_container {
     display: inline-flex;
