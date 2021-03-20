@@ -10,7 +10,7 @@
   box-sizing: border-box;
 }
 .header-image {
-  background-image: url("/images/header_image.png");
+  background-image: url("/images/header_image.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
