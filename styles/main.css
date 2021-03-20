@@ -10,11 +10,11 @@
   box-sizing: border-box;
 }
 .header-image {
-  background-image: url("/images/headerImage.png");
+  background-image: url("/images/header_image.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  height: 25pc;
+  height: 24pc;
   text-align: center;
   position: relative;
   z-index: -1;
@@ -133,12 +133,8 @@ a {
 }
 
 /* ----------------------------- mountain image ----------------------------- */
-.mountain-img {
-  width: auto;
-  height: 300px;
-  background-image: url("/images/mountain.png");
-  background-repeat: no-repeat;
-  background-size: contain;
+.mountain-img img {
+  width: 100%;
 }
 
 /* --------------------------------- footer --------------------------------- */
@@ -197,15 +193,11 @@ footer img {
   }
   .header-image {
     top: -5pc;
-    height: 27pc;
+    height: 24pc;
   }
   .header-image h1 {
     font-size: 60px;
     margin: 0;
-  }
-  .mountain-img {
-    height: 26pc;
-    background-size: cover;
   }
 }
 
@@ -216,18 +208,14 @@ footer img {
   }
   .header-image {
     top: -5pc;
-    height: 67pc;
+    height: 35pc;
   }
   .header-image h1 {
     font-size: 6rem;
     padding: 0;
     margin: 0;
-    top: 15pc;
+    top: 9pc;
     text-shadow: 0px 0px 13px#FFFFFF;
-  }
-  .mountain-img {
-    height: 44pc;
-    background-position: center;
   }
   .jacket_section,
   .newsletter {
