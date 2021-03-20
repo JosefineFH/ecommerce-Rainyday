@@ -92,12 +92,10 @@ nav a {
     padding: 0px;
   }
   nav ul {
-    padding-top: 10px;
+    padding-top: 9px;
   }
   nav a {
-    color: #72828c;
-    font-family: "Naratif-Bold";
-    font-size: 20px;
+    font-size: 22px;
     padding: 0 5px;
     letter-spacing: 2px;
   }
@@ -106,12 +104,22 @@ nav a {
     text-decoration: underline;
   }
   .menu-items {
-    /* display: inline-flex; */
     display: inherit;
   }
   .shopping-cart {
-    padding: 1pc 5px;
+    padding: 1pc 0;
   }
 }
 
 /* --------------------------- media query laptop --------------------------- */
+@media (min-width: 1024px) {
+  nav {
+    margin-right: 2pc;
+  }
+  nav a {
+    font-size: 28px;
+  }
+  nav ul {
+    padding-top: 5px;
+  }
+}
