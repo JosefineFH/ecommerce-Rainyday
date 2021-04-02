@@ -13,7 +13,8 @@
   --naratif-thin: "Naratif-Thin", sans-serif;
   --main-font: "Montserrat", sans-serif;
 }
-p {
+p,
+label {
   font-family: var(--main-font);
 }
 h2 {
@@ -37,7 +38,8 @@ h4 {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  height: 20pc;
+  height: 40vh;
+  max-width: 100%;
   text-align: center;
   position: relative;
   z-index: -1;
@@ -266,7 +268,7 @@ footer ul a {
 /* --------------------------- Laptop media queri --------------------------- */
 @media screen and (min-width: 1024px) {
   .header-image {
-    height: 25pc;
+    height: 50vh;
   }
   .header-image h1 {
     font-size: 80px;
