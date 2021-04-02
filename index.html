@@ -9,15 +9,13 @@
   <meta name="keywords" content="Jackets, outdoor, activites, hiking, skiing, camping,canoeing ">
   <meta name="author" content="Josefine Holth Development">
   <link rel="icon" href="/images/Logo.png" type="image/x-icon">
-
+  <link rel="stylesheet" href="/styles/style.css">
   <link rel="stylesheet" href="/styles/navbar.css" />
-  <link rel="stylesheet" href="/styles/main.css">
   <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
   <title>Rainydays</title>
 </head>
 
 <body>
-  <!-- -------------------------------- Menu --------------------------------- -->
   <header>
     <a href="index.html" class="logo">
       <img class="logo" src="/images/Logo.png" alt="Rainyday Logo">
@@ -37,254 +35,270 @@
         </ul>
       </nav>
       <a href="#">
-        <img class="shopping-cart" src="/images/icons/shopping-cart.png" alt="">
+        <img class="shopping-cart" src="/images/icons/shopping-cart.png" alt="Your shopping cart">
       </a>
   </header>
-  </div>
+
   <main>
     <!-- ---------------------------- Header Image ----------------------------- -->
     <section class="header-image">
       <h1>pushing the comfort zone</h1>
     </section>
     <!-- ----------------------------- Brands Logo ----------------------------- -->
-    <section class="brand_section">
-      <img src="/images/brand-logo/Arcteryx-Logo.jpg" alt="Arcteryx logo">
-      <img src="/images/brand-logo/FjällrävenLogo.png" alt="Fjällräven logo">
-      <img src="/images/brand-logo/NorronaLogo.png" alt="Norrona logo">
-      <img src="/images/brand-logo/Gridarmor.jpg" alt="Gridarmor logo">
-    </section>
-    <!-- ---------------------------- We Recommend ----------------------------- -->
-    <section class="jacket_section">
-      <h1>We Recommend</h1>
-      <div class="product-cards">
-        <div class="product-card">
-          <a href="/specific-jacket-page.html">
-            <div class="disounct_icon">
-              <img src="/images/icons/discount.png" alt="">
-            </div>
-            <img src="/images/product-images/woman-jackets/hiker-jacket-mirage.jpg" alt="Hiker W Jacket Woman Mirage">
-            <h2>Hiker Jacket - Mirage</h2>
-            <p class="prise-card">1 399 NOK</p>
-          </a>
-        </div>
-
-        <div class="product-card">
-          <a href="/specific-jacket-page.html">
-            <img src="/images/product-images/man-jackets/wylie_patch_snowboardjacket.jpg" alt=" Wylie Patch Snowboard Jacket
-            Black/Gold">
-            <h2>Snowboard Jacket - Wylie Patch </h2>
-            <p class="prise-card">1 399 NOK</p>
-          </a>
-        </div>
-
-        <div class="product-card">
-          <a href="/specific-jacket-page.html">
-            <img src="/images/product-images/woman-jackets/Snowboard-jacket-black-w.jpg"
-              alt="Yeti W Snowboard Jacket Women Black">
-            <h2>Snowboard Jacket - Yeti </h2>
-            <p class="prise-card">1 299 NOK</p>
-          </a>
-        </div>
-
-        <div class="product-card">
-          <a href="/specific-jacket-page.html">
-            <div class="disounct_icon">
-              <img src="/images/icons/discount.png" alt="">
-            </div>
-            <img src="/images/product-images/man-jackets/snowboardjacket_inka.jpg" alt="Hiker W Turjakke Woman Mirage">
-            <h2>Annok Snowboard Jacket - Inka</h2>
-            <p class="prise-card">1 799 NOK</p>
-          </a>
-        </div>
-
+    <section>
+      <div class="ourBrand_section">
+        <img src="/images/brand-logo/Arcteryx-Logo.jpg" alt="Arcteryx logo">
+        <img src="/images/brand-logo/FjällrävenLogo.png" alt="Fjällräven logo">
+        <img src="/images/brand-logo/NorronaLogo.png" alt="Norrona logo">
+        <img src="/images/brand-logo/Gridarmor.jpg" alt="Gridarmor logo">
       </div>
     </section>
+    <!-- ---------------------------- We Recommend ----------------------------- -->
+    <article>
+      <h2>We Recommend</h2>
+      <div class="products">
+        <section class="product_card">
+          <a href="#">
+            <div class="discound-icon">
+              <img src="/images/icons/discount.png" alt="Get a discount">
+            </div>
+            <img src="/images/product-images/woman-jackets/hiker-jacket-mirage.jpg" alt="Hiker W Jacket Woman Mirage">
+            <h4>Hiker Jacket - Mirage</h4>
+            <p class="prise-card">1 399 NOK</p>
+          </a>
+        </section>
+
+        <section class="product_card">
+          <a href="#">
+            <img src="/images/product-images/man-jackets/wylie_patch_snowboardjacket.jpg" alt=" Wylie Patch Snowboard Jacket
+            Black/Gold">
+            <h4>Snowboard Jacket - Wylie Patch </h4>
+            <p class="prise-card">1 399 NOK</p>
+          </a>
+        </section>
+
+        <section class="product_card">
+          <a href="#">
+            <img src="/images/product-images/woman-jackets/Snowboard-jacket-black-w.jpg"
+              alt="Yeti W Snowboard Jacket Women Black">
+            <h4>Snowboard Jacket - Yeti </h4>
+            <p class="prise-card">1 299 NOK</p>
+          </a>
+
+        </section>
+
+        <section class="product_card">
+          <a href="#">
+            <div class="discound-icon">
+              <img src="/images/icons/discount.png" alt="Get a discount">
+            </div>
+            <img src="/images/product-images/man-jackets/snowboardjacket_inka.jpg" alt="Hiker W Turjakke Woman Mirage">
+            <h4>Annok Snowboard Jacket - Inka</h4>
+            <p class="prise-card">1 799 NOK</p>
+          </a>
+        </section>
+      </div>
+    </article>
+
     <!-- ------------------------------ Subscribe ------------------------------ -->
     <section>
       <div class="newsletter">
         <h3 class="newsletter__title">Subscribe To Our Newsletter And Get<br> 10% OFF</h3>
         <p class="newsletter__description">Get 10% discount for all new jackets</p>
         <form action="" class="newsletter__subscribe">
-          <input type="text" placeholder="@email.com" class="newsletter__input">
+          <label for="emaile">
+            <input type="text" id="email" name="email" placeholder="@email.com" class="newsletter__input">
+          </label>
           <a href="#" class="button">Subscribe</a>
         </form>
-
-
       </div>
     </section>
-    <!-- ------------------------ jacets for the ladies ------------------------ -->
-    <section class="jacket_section">
-      <h1>JACKETS FOR THE LADIES</h1>
-      <div class="product-cards">
 
-        <div class="product-card">
-          <a href="/specific-jacket-page.html">
-            <div class="disounct_icon">
-              <img src="/images/icons/discount.png" alt="">
+    <!-- ------------------------ jacets for the ladies ------------------------ -->
+    <article>
+      <h2>Jackets for the ladies</h2>
+      <div class="products">
+        <section class="product_card">
+          <a href="#">
+            <div class="discound-icon">
+              <img src="/images/icons/discount.png" alt="Get a discount">
             </div>
             <img src="/images/product-images/woman-jackets/hiker-jacket-mirage.jpg" alt="Hiker W Jacket Woman Mirage">
-            <h2>Hiker Jacket - Mirage</h2>
+            <h4>Hiker Jacket - Mirage</h4>
             <p class="prise-card">1 399 NOK</p>
           </a>
-        </div>
+        </section>
 
-        <div class="product-card">
-          <a href="/specific-jacket-page.html">
+        <section class="product_card">
+          <a href="#">
             <img src="/images/product-images/woman-jackets/Snowboard-jacket-black-w.jpg"
               alt="Yeti W Snowboard Jacket Women Black">
-            <h2>Snowboard Jacket - Yeti </h2>
-            <p class="prise-card">1 299 NOK</p>
-          </a>
-        </div>
-
-        <div class="product-card">
-          <a href="/specific-jacket-page.html">
-
-            <img src="/images/product-images/woman-jackets/snowboardjacket-burgundy-w.jpg"
-              alt="Yeti W Snowboard Jacket Woman Burgundy">
-            <h2>Snowboard Jacket - Yeti </h2>
+            <h4>Snowboard Jacket - Yeti </h4>
             <p class="prise-card">1 399 NOK</p>
           </a>
-        </div>
+        </section>
 
-        <div class="product-card">
-          <a href="/specific-jacket-page.html">
-            <div class="disounct_icon">
-              <img src="/images/icons/discount.png" alt="">
+        <section class="product_card">
+          <a href="#">
+            <img src="/images/product-images/woman-jackets/snowboardjacket-burgundy-w.jpg"
+              alt="Yeti W Snowboard Jacket Woman Burgundy">
+            <h4>Snowboard Jacket - Yeti </h4>
+            <p class="prise-card">1 399 NOK</p>
+          </a>
+
+        </section>
+
+        <section class="product_card">
+          <a href="#">
+            <div class="discound-icon">
+              <img src="/images/icons/discount.png" alt="Get a discount">
             </div>
             <img src="/images/product-images/woman-jackets/faded-green-patchwork-w.jpg" alt=" Blizzard LE W Snowboard Jacket Woman Faded Green Patchwork
           ">
-            <h2> Snowboard Jacket - Faded Green Patchwork
-            </h2>
+            <h4>Snowboard Jacket - Faded Green Patchwork</h4>
             <p class="prise-card">1 399 NOK</p>
           </a>
-        </div>
-    </section>
+        </section>
+      </div>
+    </article>
+
     <!-- ---------------------------- Midle Mountain Img ----------------------------- -->
-    <section class="mountain-img">
+    <section class="img_section">
       <img src="/images/midd_img2.jpeg" alt="">
     </section>
     <!-- ---------------------------- Jacet for men ---------------------------- -->
-    <section class="jacket_section">
-      <h1>Jacket for the men</h1>
-      <div class="product-cards">
-        <div class="product-card">
-          <a href="/specific-jacket-page.html">
-
+    <article>
+      <h2>Jackets fort the men</h2>
+      <div class="products">
+        <section class="product_card">
+          <a href="#">
             <img src="/images/product-images/man-jackets/wylie_patch_snowboardjacket.jpg"
               alt="Wylie Patch Snowboard Jacket Black/Gold">
-            <h2>Snowboard Jacket - Wylie Patch</h2>
+            <h4>Wylie Patch Snowboard Jacket</h4>
             <p class="prise-card">1 399 NOK</p>
           </a>
-        </div>
-        <div class="product-card">
-          <a href="/specific-jacket-page.html">
+        </section>
 
-            <div class="disounct_icon">
-              <img src="/images/icons/discount.png" alt="">
+        <section class="product_card">
+          <a href="#">
+            <div class="discound-icon">
+              <img src="/images/icons/discount.png" alt="Get a discount">
             </div>
-            <img src="/images/product-images/man-jackets/snowboardjacket_inka.jpg" alt="Annok Snowboard Jacket Inka">
-            <h2>Annok Snowboard Jacket - Inka</h2>
+            <img src="/images/product-images/man-jackets/snowboardjacket_inka.jpg" alt="Inka Annok Snowboard Jacket ">
+            <h4> Inka Annok Snowboard Jacket</h4>
             <p class="prise-card">1 799 NOK</p>
           </a>
-        </div>
-        <div class="product-card">
-          <a href="/specific-jacket-page.html">
+        </section>
 
+        <section class="product_card">
+          <a href="#">
             <img src="/images/product-images/man-jackets/Whylie_patch_snowbordjacket.jpg"
               alt="Wylie Patch Snowboard Jacket Tucks Camo">
-            <h2>Snowboard Jacket - Wylie Patch</h2>
+            <h4>Yeti Snowboard Jacket</h4>
             <p class="prise-card">1 399 NOK</p>
           </a>
-        </div>
-        <div class="product-card">
-          <a href="/specific-jacket-page.html">
+        </section>
 
-            <div class="disounct_icon">
-              <img src="/images/icons/discount.png" alt="">
+        <section class="product_card">
+          <a href="#">
+            <div class="discound-icon">
+              <img src="/images/icons/discount.png" alt="Get a discount">
             </div>
             <img src="/images/product-images/man-jackets/wylie_patch_snowboardjacket._blue.jpg"
               alt="Wylie Patch Snowboard Jacket Blue Steel">
-            <h2>Snowboard Jacket - Wylie Patch</h2>
+            <h4>Wylie Patch Snowboard Jacket</h4>
             <p class="prise-card">1 399 NOK</p>
           </a>
-        </div>
-    </section>
-    <!-- ------------------------------ our offer ------------------------------ -->
-    <section class="jacket_section">
-      <h1>our offer</h1>
-      <div class="product-cards">
-        <div class="product-card">
-          <a href="/specific-jacket-page.html">
+        </section>
+      </div>
+    </article>
 
-            <div class="disounct_icon">
-              <img src="/images/icons/discount.png" alt="">
+    <!-- ------------------------------ our offer ------------------------------ -->
+    <article>
+      <h2>our offer</h2>
+      <div class="products">
+        <section class="product_card">
+          <a href="#">
+            <div class="discound-icon">
+              <img src="/images/icons/discount.png" alt="Get a discount">
             </div>
             <img src="/images/product-images/man-jackets/snowboardjacket_inka.jpg" alt="Annok Snowboardjakke Inka">
-            <h2>Annok Snowboard - Jacket Inka</h2>
+            <h4>Inka Annok Snowboard Jacket</h4>
             <p class="prise-card">1 799 NOK</p>
           </a>
-        </div>
-        <div class="product-card">
-          <a href="/specific-jacket-page.html">
+        </section>
 
-            <div class="disounct_icon">
-              <img src="/images/icons/discount.png" alt="">
+        <section class="product_card">
+          <a href="#">
+            <div class="discound-icon">
+              <img src="/images/icons/discount.png" alt="Get a discount">
             </div>
-            <img src="/images/product-images/woman-jackets/faded-green-patchwork-w.jpg" alt=" Blizzard LE W Snowboardjakke
-            Woman Faded Green Patchwork ">
-            <h2>Snowboard Jacket - Faded Green Patchwork</h2>
-            <p class=" prise-card">1 399 NOK</p>
-          </a>
-        </div>
-        <div class="product-card">
-          <a href="/specific-jacket-page.html">
-            <div class="disounct_icon">
-              <img src="/images/icons/discount.png" alt="">
-            </div>
-            <img src="/images/product-images/woman-jackets/hiker-jacket-mirage.jpg" alt="Hiker W Turjakke Woman Mirage">
-            <h2>Hiker Jacket - Mirage</h2>
+            <img src="/images/product-images/woman-jackets/faded-green-patchwork-w.jpg"
+              alt=" Blizzard LE W Snowboardjakke Woman Faded Green Patchwork ">
+            <h4>Faded Green Patchwork Snowboard Jacket</h4>
             <p class="prise-card">1 399 NOK</p>
           </a>
-        </div>
-        <div class="product-card">
-          <a href="/specific-jacket-page.html">
-            <div class="disounct_icon">
-              <img src="/images/icons/discount.png" alt="">
+        </section>
+
+        <section class="product_card">
+          <a href="#">
+            <div class="discound-icon">
+              <img src="/images/icons/discount.png" alt="Get a discount">
+            </div>
+            <img src="/images/product-images/woman-jackets/hiker-jacket-mirage.jpg" alt="Hiker W Turjakke Woman Mirage">
+            <h4>Mirage Hiker Jacket</h4>
+            <p class="prise-card">1 399 NOK</p>
+          </a>
+        </section>
+
+        <section class="product_card">
+          <a href="#">
+            <div class="discound-icon">
+              <img src="/images/icons/discount.png" alt="Get a discount">
             </div>
             <img src="/images/product-images/man-jackets/wylie_patch_snowboardjacket._blue.jpg"
               alt="Wylie Patch Snowboard Jacket Blue Steel">
-            <h2>Snowboard Jacket - Wylie Patch </h2>
+            <h4>Wylie Patch Snowboard Jacket </h4>
             <p class="prise-card">1 399 NOK</p>
           </a>
-        </div>
-    </section>
-
+        </section>
+      </div>
+    </article>
   </main>
-  <!-- ------------------------------- footer -------------------------------- -->
   <footer>
-    <div class="footer_container">
-      <div class="footer_logo">
-        <img src="/images/RainyDays_Logo_white.png" alt="Rainydays logo white">
+    <div>
+      <img class="logo" src="/images/RainyDays_Logo_white.png" alt="Rainydays white logo">
+    </div>
+    <div>
+      <ul>
+        <li><a href="/list-of-jackets.html">Woman</a></li>
+        <li><a href="/list-of-jackets.html">Men</a></li>
+        <li><a href="/list-of-jackets.html">Jackets</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+        <li><a href="/about.html">About</a></li>
+      </ul>
+    </div>
+    <div class="social_links">
+      <div>
+        <a href="#">
+          <img class="icons" src="/images/icons/speech-bubble.png" alt="Chat With Us">
+        </a>
       </div>
       <div>
-        <ul class="links">
-          <li><a href="/list-of-jackets.html">Woman</a></li>
-          <li><a href="/list-of-jackets.html">Men</a></li>
-          <li><a href="/list-of-jackets.html">Jackets</a></li>
-          <li><a href="/contact.html">Contact</a></li>
-          <li><a href="/about.html">About</a></li>
-        </ul>
+        <a href="#">
+          <img src="/images/icons/facebook-logo.png" alt="link to our facebook" class="icons">
+        </a>
       </div>
-      <div class="social_links">
-        <a href="#"><img src="/images/icons/chat.png" alt="Chat With Us"></a>
-        <a href="#"><img src="/images/icons/facebook.png" alt="Facebook"></a>
-        <a href="#"><img src="/images/icons/instagram.png" alt="Instagram"></a>
+      <div>
+        <a href="#" alt>
+          <img src="/images/icons/instagram.png" alt="Our Instagram" class="icons">
+        </a>
       </div>
     </div>
-    <div">
+    <div class="copyright">
       <p>&#169; Josefine Holth Development 2021</p>
-      </div>
+    </div>
+
   </footer>
 </body>
 
