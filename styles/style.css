@@ -37,23 +37,23 @@ h4 {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    height: 24pc;
+    height: 20pc;
     text-align: center;
     position: relative;
     z-index: -1;
-    top: -5pc;
+    top: -4pc;
   }
 
   .header-image h1 {
     font-family: var(--naratif-bold);
     text-transform: uppercase;
-    font-size: 7vw;
+    font-size: 40px;
     position: relative;
     top: 8pc;
     color: var(--main-color-dark);
     text-shadow: 2px 2px 2px var(--main-text-color-light);
     margin: 0;
-  }
+  } 
 
   /* --------------------------- Our Brand - Section -------------------------- */
 .ourBrand_section {
@@ -244,7 +244,14 @@ footer ul a {
 }
 
 /* --------------------------- Laptop media queri --------------------------- */
-/* @media only screen and(min-width: 1024px) {} */
+@media screen and (min-width: 1024px) {
+    .header-image {
+        height: 25pc;
+      }
+      .header-image h1 {
+        font-size: 80px;
+      } 
+}
 
 
 
