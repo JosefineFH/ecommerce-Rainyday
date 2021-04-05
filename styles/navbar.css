@@ -15,7 +15,7 @@ header {
   justify-content: space-between;
   background-color: rgba(255, 255, 255, 0.89);
   padding: 0 2pc 0;
-  box-shadow: 0pt 3px 6px #00000029;
+  box-shadow: 0pt 1px 40px var(--main-color-dark);
   position: sticky;
   top: 0;
   height: 48pt;
@@ -26,7 +26,7 @@ header img {
 }
 ion-icon {
   font-size: 40px;
-  color: #72828c;
+  color: var(--main-color-dark);
 }
 header label {
   position: relative;
@@ -58,8 +58,8 @@ nav li {
   list-style: none;
 }
 nav a {
-  color: #72828c;
-  font-family: "Naratif-Bold";
+  color: var(--main-color-dark);
+  font-family: var(--naratif-bold);
   font-size: 27pt;
   letter-spacing: 3pt;
   text-decoration: none;
@@ -100,7 +100,7 @@ nav a {
     letter-spacing: 2px;
   }
   nav a:hover {
-    color: #ff7243;
+    color: var(--orange-color);
     text-decoration: underline;
   }
   .menu-items {
