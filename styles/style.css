@@ -20,7 +20,7 @@ label {
 h2 {
   font-family: var(--naratif-bold);
   text-transform: uppercase;
-  font-size: 5vw;
+  font-size: 10vw;
   position: relative;
   color: var(--main-color-dark);
   text-align: center;
@@ -73,7 +73,7 @@ h4 {
   align-items: center;
 }
 .product_card {
-  background: #e3eaff;
+  background: #fcfcfc;
   box-sizing: content-box;
   margin: 30px 10px;
   width: 200px;
@@ -174,6 +174,7 @@ footer {
   justify-content: center;
   color: var(--main-text-color-light);
   align-items: center;
+  grid-template-columns: auto;
 }
 footer .logo {
   margin: 20px auto;
@@ -242,7 +243,7 @@ footer ul a {
 /* --------------------------- Tablet media queri --------------------------- */
 @media screen and (min-width: 600px) {
   footer {
-    grid-template-columns: 400px 200px;
+    grid-template-columns: 300px 300px;
   }
   .links {
     grid-column: 2;
@@ -267,6 +268,13 @@ footer ul a {
 }
 /* --------------------------- Laptop media queri --------------------------- */
 @media screen and (min-width: 1024px) {
+  h2 {
+    font-size: 4vw;
+  }
+  article {
+    width: 800px;
+    margin: 0 auto;
+  }
   .header-image {
     height: 50vh;
     top: -6pc;
@@ -276,5 +284,8 @@ footer ul a {
   }
   .aboutUs_grid {
     grid-template-columns: 450px 450px;
+  }
+  footer {
+    grid-template-columns: 500px 500px;
   }
 }
