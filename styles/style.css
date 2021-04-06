@@ -4,6 +4,7 @@
   font-family: "Naratif-Thin";
   src: url("/fonts/Akufadhl-Naratif-Condensed-Thin.otf");
 }
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700 &display=swap");
 :root {
   --main-light-color: #f2f2f2;
   --main-color-dark: #1e4959;
@@ -12,7 +13,6 @@
   --naratif-thin: "Naratif-Thin", sans-serif;
   --main-font: "Montserrat", sans-serif;
 }
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700 &display=swap");
 p,
 label {
   font-family: var(--main-font);
