@@ -10,11 +10,66 @@
     <meta name="author" content="Josefine Holth Development">
     <link rel="icon" href="/images/Logo.png" type="image/x-icon">
     <link rel="stylesheet" href="/styles/navbar.css" />
-    <link rel="stylesheet" href="/styles/contact.css">
     <link rel="stylesheet" href="/styles/style.css">
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
     <title>Rainyday | Contact Rainyday</title>
 </head>
+<style>
+    button {
+        border-radius: 20px;
+        width: 180px;
+        height: 35px;
+        text-transform: uppercase;
+        border: 2px solid var(--orange-color);
+        background: linear-gradient(145deg, #f24927, #cb3d20);
+        font-size: 22px;
+        color: var(--main-light-color);
+        font-family: var(--naratif-bold);
+        margin-top: 40px;
+    }
+
+
+    button:hover {
+        color: var(--orange-color);
+
+        background-color: #fcfcfc;
+        background: linear-gradient(145deg, #fcfcfc, #fcfcfc);
+
+        box-shadow: 0px 0px 5px #c03a1f, 0px 0px 5px #ff4e29
+    }
+
+    .vertical-center {
+        margin: 0 auto;
+    }
+
+    .section {
+        display: grid;
+        justify-content: center;
+        padding: 40px;
+
+    }
+
+    .section h1 {
+        text-align: center;
+    }
+
+    .section img {
+        margin-top: 50px;
+        margin-left: auto;
+        margin-right: auto;
+        height: 150px;
+
+    }
+
+    @media screen and (min-width: 1024px) {
+        .section {
+            width: 800px;
+            margin: 45px auto;
+        }
+
+
+    }
+</style>
 
 <body>
     <!-- -------------------------------- Menu --------------------------------- -->
@@ -43,7 +98,15 @@
     </header>
 
     <main>
-
+        <section class="section">
+            <img src="/images/icons/icons8-ok-512.png" alt="Checkout">
+            <h1>Your order number is: 00001</h1>
+            <p>Your order has now been sent to us and we will send you a confirmation email. Remember to save
+                your order number.</p>
+            <p>If you are going to refund or cancel your order, please contact us by email retur@email.com with the
+                order number you have received from us.</p>
+            <a class="vertical-center" href="#"> <button>Continue Shopping</button> </a>
+        </section>
     </main>
 
 
