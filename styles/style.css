@@ -13,6 +13,17 @@
   --naratif-thin: "Naratif-Thin", sans-serif;
   --main-font: "Montserrat", sans-serif;
 }
+
+/* ---------------------------- testing new vode ---------------------------- */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+/* ----------------------------------- ... ---------------------------------- */
+
 p,
 label {
   font-family: var(--main-font);
@@ -57,7 +68,6 @@ h3 {
   top: 8pc;
   color: var(--main-color-dark);
   text-shadow: 2px 2px 2px var(--main-light-color);
-  margin: 0;
 }
 /* --------------------------- Our Brand - Section -------------------------- */
 .ourBrand_section {
@@ -112,7 +122,6 @@ h3 {
 }
 /* ------------------------------- newsletter ------------------------------- */
 .newsletter {
-  /* margin: 0 20px; */
   padding: 2pc 0.5pc;
   text-align: center;
   color: var(--main-light-color);

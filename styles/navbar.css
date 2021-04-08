@@ -67,8 +67,9 @@ nav a {
   text-transform: uppercase;
 }
 .shopping-cart {
-  align-items: flex-end;
-  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* --------------------------- media query tablet --------------------------- */
@@ -107,9 +108,9 @@ nav a {
   .menu-items {
     display: inherit;
   }
-  .shopping-cart {
+  /* .shopping-cart {
     padding: 1pc 0;
-  }
+  } */
 }
 
 /* --------------------------- media query laptop --------------------------- */
