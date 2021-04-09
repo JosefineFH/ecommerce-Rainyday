@@ -14,9 +14,6 @@
   --main-font: "Montserrat", sans-serif;
 }
 
-/* ---------------------------- testing new code ---------------------------- */
-
-/* ----------------------------------- ... ---------------------------------- */
 body {
   margin-right: 0;
 }
@@ -57,11 +54,7 @@ a {
   background-repeat: no-repeat;
   background-position: bottom;
   min-height: 250px;
-  /* width: 100%; */
   text-align: center;
-  /* position: relative;
-  z-index: -1;
-  top: -6rem; */
 }
 .header-image h1 {
   margin: 0;
@@ -177,53 +170,11 @@ input[type="text"].newsletter__input {
   font-family: var(--main-font);
 }
 
-/* .newsletter {
-  padding: 2pc 0.5pc;
-  text-align: center;
-  color: var(--main-light-color);
-  border-radius: 0.5pc;
-  width: 400px;
-  background-color: var(--main-color-dark);
-  margin: 0 auto;
-}
-.newsletter h3 {
-  color: var(--main-light-color);
-  font-size: 25px;
-  margin: 0;
-}
-.newsletter__description,
-a {
-  font-family: var(--main-font);
-}
-.newsletter__input {
-  outline: none;
-  border: none;
-  width: 90%;
-  font-size: 0.938rem;
-}
-.newsletter__subscribe {
-  display: flex;
-  column-gap: 0.5pc;
-  background-color: white;
-  padding: 0.5pc;
-  border-radius: 0.5pc;
-}
-.newsletter__input::placeholder {
-  color: #1e4959;
-  font-family: "Montserrat", sans-serif;
-  font-size: 0.938rem;
-  font-weight: 300;
-}
-.newsletter a {
-  text-decoration: none;
-  font-family: "Montserrat", sans-serif;
-  color: #1e4959;
-} */
 .mountain-img img {
   width: 100%;
 }
-/* Button Style */
 
+/* Button Style */
 button,
 .button {
   cursor: pointer;
