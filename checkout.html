@@ -48,7 +48,7 @@
             <h1>Mirage Hiker Jacket</h1>
             <p class="vertical-center">Prize: <span class="checkout-price">1 399,- NOK</span> </p>
             <div class="personal-info ">
-                <form action="" formaction="/checkout-success.html" method="POST">
+                <form method="POST" action="https://rainydaysecommerce.netlify.app/checkout-success.html">
                     <div>
                         <label for="first_name">First Name</label>
                         <input type="text" id="first_name">
@@ -133,14 +133,12 @@
                         <input type="text" id="cardholder_name">
 
                         <div>
-                            <input formaction="/checkout-success.html" class="button vertical-center" type="submit"
-                                value="PAY 1 399,- NOK">
+                            <input class="button vertical-center" type="submit" value="PAY 1 399,- NOK">
                             <!-- <a class="button_link" href="/checkout-success.html">
                             </a> -->
                         </div>
                     </div>
-            </div>
-            </form>
+                </form>
             </div>
         </section>
     </main>
