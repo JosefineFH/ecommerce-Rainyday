@@ -114,8 +114,7 @@ a {
   width: 200px;
 }
 
-a.button {
-  padding: 1px 50px;
+div.button {
   cursor: pointer;
 }
 
