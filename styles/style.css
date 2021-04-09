@@ -189,6 +189,7 @@ button,
   color: var(--main-light-color);
   font-family: var(--naratif-bold);
   outline: 0;
+  text-align: center;
 }
 
 button:hover,
