@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@5\400&display=swap");
 @font-face {
   font-family: "Naratif-Bold";
   src: url("/fonts//Akufadhl-Naratif-Condensed-Bold-Italic.otf");
@@ -17,7 +17,9 @@
 /* ---------------------------- testing new code ---------------------------- */
 
 /* ----------------------------------- ... ---------------------------------- */
-
+body {
+  margin-right: 0;
+}
 p,
 label {
   font-family: var(--main-font);
@@ -34,8 +36,6 @@ h1 {
 }
 h3 {
   font-family: var(--naratif-bold);
-  /* color: var(--main-color-dark); */
-  /* font-size: 15px; */
 }
 .img_section img {
   width: 100%;
@@ -43,23 +43,24 @@ h3 {
 
 /* ----------------------------- Header section ----------------------------- */
 .header-image {
-  background-image: url("/images/header_image2.jpeg");
+  background-image: url("/images/index-header-img.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
-  height: 50vh;
-  max-width: 100%;
+  background-position: bottom;
+  min-height: 250px;
+  /* width: 100%; */
   text-align: center;
-  position: relative;
+  /* position: relative;
   z-index: -1;
-  top: -6rem;
+  top: -6rem; */
 }
 .header-image h1 {
+  margin: 0;
   font-family: var(--naratif-bold);
   text-transform: uppercase;
-  font-size: 3rem;
+  /* font-size: 3rem; */
   position: relative;
-  top: 8pc;
+  top: 35px;
   color: var(--main-color-dark);
   text-shadow: 2px 2px 2px var(--main-light-color);
 }
@@ -129,12 +130,14 @@ h3 {
   text-align: center;
   color: var(--main-light-color);
   border-radius: 0.5pc;
-  max-width: 890px;
+  width: 400px;
   background-color: var(--main-color-dark);
+  margin: 0 auto;
 }
 .newsletter h3 {
   color: var(--main-light-color);
-  font-size: 4rem;
+  font-size: 25px;
+  margin: 0;
 }
 .newsletter__description,
 a {
@@ -282,6 +285,12 @@ footer ul a {
 
 /* --------------------------- Tablet media queri --------------------------- */
 @media screen and (min-width: 600px) {
+  .header-image {
+    min-height: 300px;
+  }
+  .newsletter {
+    width: 500px;
+  }
   footer {
     grid-template-columns: 300px 300px;
   }
@@ -308,6 +317,13 @@ footer ul a {
 }
 /* --------------------------- Laptop media queri --------------------------- */
 @media screen and (min-width: 1024px) {
+  .header-image {
+    min-height: 490px;
+  }
+  .header-image h1 {
+    font-size: 5pc;
+    top: 3pc;
+  }
   h2 {
     font-size: 3rem;
   }
@@ -315,14 +331,7 @@ footer ul a {
     width: 900px;
     margin: 0 auto;
   }
-  .header-image {
-    height: 29rem;
-    top: -6pc;
-    background-position: bottom;
-  }
-  /* .header-image h1 {
-    font-size: 80px;
-  } */
+
   .aboutUs_grid {
     grid-template-columns: 450px 450px;
   }
@@ -336,13 +345,22 @@ footer ul a {
   .ourBrand_section img {
     width: 200px;
   }
+}
+@media screen and (min-width: 1440px) {
+  .header-image {
+    height: 563px;
+  }
   .header-image h1 {
-    font-size: 5rem;
+    font-size: 7pc;
+    top: 1pc;
   }
 }
 @media screen and (min-width: 2560px) {
   .header-image {
-    height: 40rem;
-    top: -6pc;
+    height: 800px;
+  }
+  .header-image h1 {
+    font-size: 8pc;
+    top: 5pc;
   }
 }
