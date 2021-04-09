@@ -115,6 +115,6 @@ input[type="tel"]:focus {
   }
   .payment_options > img {
     padding: 30px 0;
-    width: 60%;
+    height: 60%;
   }
 }
