@@ -48,7 +48,7 @@
             <h1>Mirage Hiker Jacket</h1>
             <p class="vertical-center">Prize: <span class="checkout-price">1 399,- NOK</span> </p>
             <div class="personal-info ">
-                <form action="submit.php" method="POST">
+                <form action="" formaction="/checkout-success.html" method="POST">
                     <div>
                         <label for="first_name">First Name</label>
                         <input type="text" id="first_name">
@@ -84,7 +84,7 @@
 
                     <!-- -------------------------- Delivery Options --------------------------- -->
                     <div class="delivery_options">
-                        <div class="delivery_option">
+                        <div class="delivery_option vertical-center">
                             <div class="delivery_option_text">
                                 <p>To The Store Nearby (0,00)</p>
                                 <p>Rema 1000 Oslo, Norway 9090, Osloveien 01</p>
@@ -97,7 +97,7 @@
                                     checked>
                             </div>
                         </div>
-                        <div class="delivery_option">
+                        <div class="delivery_option vertical-center">
                             <div class="delivery_option_text">
                                 <p>Pick-Up-Point (40,00)</p>
                                 <p>Pick-Up-Point Oslo, Norway 9090, Osloveien 100</p>
@@ -133,10 +133,14 @@
                         <input type="text" id="cardholder_name">
 
                         <div>
-                            <input class="button vertical-center" type="submit" value="PAY 1 399,- NOK">
+                            <input formaction="/checkout-success.html" class="button vertical-center" type="submit"
+                                value="PAY 1 399,- NOK">
+                            <!-- <a class="button_link" href="/checkout-success.html">
+                            </a> -->
                         </div>
                     </div>
-                </form>
+            </div>
+            </form>
             </div>
         </section>
     </main>

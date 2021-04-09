@@ -4,6 +4,10 @@
   margin: 0 auto;
 }
 
+a {
+  text-decoration: none;
+}
+
 /* ----------------------------------- .. ----------------------------------- */
 .section {
   display: grid;
@@ -94,12 +98,19 @@ input[type="tel"]:focus {
     margin: 45px auto;
   }
 }
-
-.section {
-  border: 1px green solid;
-}
-
 .checkout-price {
   color: var(--main-color-dark);
   font-family: var(--naratif-bold);
+}
+
+.button {
+  margin-top: 40px;
+}
+
+@media screen and (min-width: 600px) {
+  .button {
+    width: 280px;
+    height: 50px;
+    font-size: 2rem;
+  }
 }
