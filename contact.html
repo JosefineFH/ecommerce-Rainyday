@@ -15,76 +15,6 @@
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
     <title>Rainydays | Contact Rainydays</title>
 </head>
-<style>
-    .main_content {
-        /* border: 1px solid red; */
-        display: grid;
-        /* grid-template-columns: 400px 600px; */
-        justify-content: center;
-    }
-
-    .contact_info {
-        /* border: 1px solid green; */
-        display: grid;
-        grid-template-columns: auto 1fr;
-        align-items: center;
-    }
-
-    .contact_info>.icons>img {
-        height: 30px;
-    }
-
-
-    .contact_form {
-        margin: 40px 20px;
-        box-shadow: 0px 3px 63px #00000029;
-    }
-
-    .form_input {
-        margin: 30px 20px;
-    }
-
-    input[type=text],
-    [type=email],
-    textarea {
-        height: 30px;
-        width: 70%;
-        border-radius: 4px;
-        border: 2px solid #FF7243;
-        margin-top: 10px;
-        padding: 12px 20px;
-        margin: 8px 0;
-
-    }
-
-
-    @media screen and (min-width: 600px) {
-        .contact_info {
-            /* border: 1px solid green; */
-            display: grid;
-            /* grid-template-columns: 70px 250px; */
-            align-items: center;
-        }
-
-        .main_content {
-            /* border: 1px solid red; */
-            display: grid;
-            /* grid-template-columns: 400px 600px; */
-            justify-content: center;
-            margin-bottom: 30px;
-        }
-    }
-
-    @media screen and (min-width: 1024px) {
-        .main_content {
-            /* border: 1px solid red; */
-            display: grid;
-            grid-template-columns: 400px 400px;
-            justify-content: center;
-            margin-bottom: 30px;
-        }
-    }
-</style>
 
 <body>
     <!-- -------------------------------- Menu --------------------------------- -->
@@ -132,7 +62,7 @@
                     </div>
                 </div>
                 <div class="contact_form">
-                    <form action="post.php" method="POST">
+                    <form action="" method="">
                         <div class="form_input">
                             <label for="full_name">Your Name...</label>
                             <input type="text" name="full_name" id="full_name">
@@ -145,8 +75,8 @@
                             <label for="message">Your Message...</label>
                             <textarea name="message" id="messaage" cols="30" rows="10"></textarea>
                         </div>
-                        <div class="submit">
-                            <input type="submit" value="Send">
+                        <div>
+                            <input class="button vertical-center" type="submit" value="Send">
                         </div>
                     </form>
                 </div>
