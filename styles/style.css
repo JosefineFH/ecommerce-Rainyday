@@ -73,15 +73,7 @@ a {
   color: var(--main-color-dark);
   text-shadow: 2px 2px 2px var(--main-light-color);
 }
-/* @media screen and (min-width: 1920px) {
-}
 
-@media screen and (min-width: 2560px) {
-  .header-image {
-    height: 40rem;
-    top: -6pc;
-  }
-} */
 /* --------------------------- Our Brand - Section -------------------------- */
 .ourBrand_section {
   display: flex;
@@ -108,6 +100,7 @@ a {
   width: 200px;
   height: max-content;
   text-align: center;
+  padding-bottom: 20px;
 }
 .product_card h3 {
   font-family: var(--naratif-bold);
@@ -115,9 +108,15 @@ a {
 }
 .product_card p {
   padding: 0 10px;
+  color: var(--main-color-dark);
 }
 .product_card img {
   width: 200px;
+}
+
+a.button {
+  padding: 1px 50px;
+  cursor: pointer;
 }
 
 .discound-icon img {
@@ -126,10 +125,7 @@ a {
   padding: 7px;
   margin-left: 35px;
 }
-.product_card a {
-  text-decoration: none;
-  color: var(--main-color-dark);
-}
+
 .product_card:hover {
   box-shadow: -20px 20px 60px #d6d6d6, 20px -20px 60px #ffffff;
 }
@@ -179,7 +175,7 @@ a {
 .mountain-img img {
   width: 100%;
 }
-/* Botton Style */
+/* Button Style */
 
 button,
 .button {
