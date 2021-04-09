@@ -14,14 +14,8 @@
   --main-font: "Montserrat", sans-serif;
 }
 
-/* ---------------------------- testing new vode ---------------------------- */
-* {
-  box-sizing: border-box;
-}
+/* ---------------------------- testing new code ---------------------------- */
 
-body {
-  margin: 0;
-}
 /* ----------------------------------- ... ---------------------------------- */
 
 p,
@@ -53,22 +47,31 @@ h3 {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  height: 40vh;
+  height: 50vh;
   max-width: 100%;
   text-align: center;
   position: relative;
   z-index: -1;
-  top: -4pc;
+  top: -6rem;
 }
 .header-image h1 {
   font-family: var(--naratif-bold);
   text-transform: uppercase;
-  font-size: 40px;
+  font-size: 3rem;
   position: relative;
   top: 8pc;
   color: var(--main-color-dark);
   text-shadow: 2px 2px 2px var(--main-light-color);
 }
+/* @media screen and (min-width: 1920px) {
+}
+
+@media screen and (min-width: 2560px) {
+  .header-image {
+    height: 40rem;
+    top: -6pc;
+  }
+} */
 /* --------------------------- Our Brand - Section -------------------------- */
 .ourBrand_section {
   display: flex;
@@ -80,6 +83,7 @@ h3 {
   opacity: 0.7;
   width: 20vw;
 }
+
 /* ---------------------------- Product - Section --------------------------- */
 .products {
   display: flex;
@@ -108,8 +112,7 @@ h3 {
 
 .discound-icon img {
   position: absolute;
-  height: 40px;
-  width: 40px;
+  width: 50px;
   padding: 7px;
   margin-left: 35px;
 }
@@ -131,7 +134,7 @@ h3 {
 }
 .newsletter h3 {
   color: var(--main-light-color);
-  font-size: 40px;
+  font-size: 4rem;
 }
 .newsletter__description,
 a {
@@ -141,7 +144,7 @@ a {
   outline: none;
   border: none;
   width: 90%;
-  font-size: 0.938pc;
+  font-size: 0.938rem;
 }
 .newsletter__subscribe {
   display: flex;
@@ -153,7 +156,7 @@ a {
 .newsletter__input::placeholder {
   color: #1e4959;
   font-family: "Montserrat", sans-serif;
-  font-size: 0.938pc;
+  font-size: 0.938rem;
   font-weight: 300;
 }
 .newsletter a {
@@ -165,7 +168,9 @@ a {
   width: 100%;
 }
 /* Botton Style */
-button {
+
+button,
+.button {
   cursor: pointer;
   border-radius: 20px;
   width: 180px;
@@ -174,19 +179,18 @@ button {
   border: 2px solid var(--orange-color);
   /* background-color: var(--orange-color); */
   background: linear-gradient(145deg, #f24927, #cb3d20);
-  font-size: 22px;
+  font-size: 1.5rem;
   margin: 20px 0;
   color: var(--main-light-color);
   font-family: var(--naratif-bold);
   outline: 0;
 }
 
-button:hover {
+button:hover,
+.button:hover {
   color: var(--orange-color);
-
   background-color: #fcfcfc;
   background: linear-gradient(145deg, #fcfcfc, #fcfcfc);
-
   box-shadow: 0px 0px 5px #c03a1f, 0px 0px 5px #ff4e29;
 }
 
@@ -232,7 +236,7 @@ footer ul {
 footer ul a {
   color: white;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 1.5rem;
   margin: 10px 0;
 }
 .social_links {
@@ -267,7 +271,7 @@ footer ul a {
   text-transform: capitalize;
   color: var(--orange-color);
   text-decoration: none;
-  font-size: 20px;
+  font-size: 1.5rem;
 }
 
 .hiring > a:hover {
@@ -304,22 +308,21 @@ footer ul a {
 }
 /* --------------------------- Laptop media queri --------------------------- */
 @media screen and (min-width: 1024px) {
-  h2,
-  h1 {
-    font-size: 4vw;
+  h2 {
+    font-size: 3rem;
   }
   article {
     width: 900px;
     margin: 0 auto;
   }
   .header-image {
-    height: 45vh;
-    top: -5pc;
+    height: 29rem;
+    top: -6pc;
     background-position: bottom;
   }
-  .header-image h1 {
+  /* .header-image h1 {
     font-size: 80px;
-  }
+  } */
   .aboutUs_grid {
     grid-template-columns: 450px 450px;
   }
@@ -332,5 +335,14 @@ footer ul a {
   }
   .ourBrand_section img {
     width: 200px;
+  }
+  .header-image h1 {
+    font-size: 5rem;
+  }
+}
+@media screen and (min-width: 2560px) {
+  .header-image {
+    height: 40rem;
+    top: -6pc;
   }
 }

@@ -10,12 +10,11 @@
     <meta name="author" content="Josefine Holth Development">
     <link rel="icon" href="/images/Logo.png" type="image/x-icon">
     <link rel="stylesheet" href="/styles/navbar.css" />
-    <link rel="stylesheet" href="/styles/contact.css">
     <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/checkout.css">
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
     <title>Rainyday | Checkout</title>
 </head>
-
 
 <body>
     <!-- -------------------------------- Menu --------------------------------- -->
@@ -37,14 +36,109 @@
                     <li><a href="/about.html">about</a></li>
                 </ul>
             </nav>
-            <a class="shopping-cart" href="/checkout.html">
+            <a href="#">
                 <img class="shopping-cart" src="/images/icons/shopping-cart.png" alt="Your shopping cart">
             </a>
         </div>
     </header>
     <main>
+        <section class="section">
+            <img class="product_img vertical-center " src="/images/product-images/woman-jackets/hiker-jacket-mirage.jpg"
+                alt="">
+            <h1>Mirage Hiker Jacket</h1>
+            <p class="vertical-center">Prize: <span class="checkout-price">1 399,- NOK</span> </p>
+            <div class="personal-info ">
+                <form action="submit.php" method="POST">
+                    <div>
+                        <label for="first_name">First Name</label>
+                        <input type="text" id="first_name">
+                    </div>
 
+                    <div>
+                        <label for="last_name">Last Name</label>
+                        <input type="text" id="last_name">
+                    </div>
+                    <div>
+                        <label for="address">address</label>
+                        <input type="text" id="address">
+                    </div>
 
+                    <div class="city_code">
+                        <div>
+                            <label for="city">city</label>
+                            <input type="text" id="city">
+                        </div>
+                        <div>
+                            <label for="zip_code">ZIP Code</label>
+                            <input type="number" id="zip_code">
+                        </div>
+                    </div>
+                    <div>
+                        <label for="contry">contry</label>
+                        <input type="text" id="contry">
+                    </div>
+                    <div>
+                        <label for="phone_number">Phone number</label>
+                        <input type="tel" id="phone_number">
+                    </div>
+
+                    <!-- -------------------------- Delivery Options --------------------------- -->
+                    <div class="delivery_options">
+                        <div class="delivery_option">
+                            <div class="delivery_option_text">
+                                <p>To The Store Nearby (0,00)</p>
+                                <p>Rema 1000 Oslo, Norway 9090, Osloveien 01</p>
+                            </div>
+                            <div class="delivery_logo">
+                                <img class="logo_img" src="/images/postenlogo.png" alt="Delivery with Posten Norway">
+
+                                <label for="delivery-Posten-Norway"></label>
+                                <input type="checkbox" id="delivery-Posten-Norway" name="delivery-Posten-Norway"
+                                    checked>
+                            </div>
+                        </div>
+                        <div class="delivery_option">
+                            <div class="delivery_option_text">
+                                <p>Pick-Up-Point (40,00)</p>
+                                <p>Pick-Up-Point Oslo, Norway 9090, Osloveien 100</p>
+                            </div>
+                            <div class="delivery_logo">
+                                <img src="/images/Logo.png" alt="Delivery with Posten Norway">
+
+                                <label for="delivery-Posten-Norway"></label>
+                                <input type="checkbox" id="delivery-Posten-Norway" name="delivery-Posten-Norway">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- --------------------------- payment options --------------------------- -->
+
+                    <div class="payment_options">
+                        <img class="vertical-center" src="/images/visa_card.png" alt="">
+                        <div class="cardin_info">
+                            <div>
+                                <label for="card_number">Card Number</label>
+                                <input type="number" id="card_number">
+                            </div>
+                            <div>
+                                <label for="expiration_date">Exxpiration date</label>
+                                <input type="number" id="expiration_date">
+                            </div>
+                            <div>
+                                <label for="cvc_number">CVC</label>
+                                <input type="number" id="cvc_number">
+                            </div>
+                        </div>
+                        <label for="cardholder_name">Card holder name</label>
+                        <input type="text" id="cardholder_name">
+
+                        <div>
+                            <input class="button vertical-center" type="submit" value="PAY 1 399,- NOK">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
     </main>
     <footer>
         <div>

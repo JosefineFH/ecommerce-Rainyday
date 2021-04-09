@@ -26,13 +26,17 @@ header img {
   height: 2pc;
 }
 ion-icon {
-  font-size: 40px;
+  font-size: 3rem;
   color: var(--main-color-dark);
 }
 header label {
   position: relative;
   z-index: 99;
 }
+.menu-items {
+  display: inline-flex;
+}
+
 #dropdown-menu {
   display: none;
 }
@@ -61,15 +65,15 @@ nav li {
 nav a {
   color: var(--main-color-dark);
   font-family: var(--naratif-bold);
-  font-size: 27pt;
+  font-size: 2.5rem;
   letter-spacing: 3pt;
   text-decoration: none;
   text-transform: uppercase;
 }
 .shopping-cart {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-end;
+  height: 45px;
+  padding: 3px 0;
 }
 
 /* --------------------------- media query tablet --------------------------- */
@@ -97,7 +101,7 @@ nav a {
     padding-top: 9px;
   }
   nav a {
-    font-size: 22px;
+    font-size: 1.4rem;
     padding: 0 5px;
     letter-spacing: 2px;
   }
@@ -105,12 +109,10 @@ nav a {
     color: var(--orange-color);
     text-decoration: underline;
   }
-  .menu-items {
-    display: inherit;
+
+  .shopping-cart {
+    padding: 15px 10px;
   }
-  /* .shopping-cart {
-    padding: 1pc 0;
-  } */
 }
 
 /* --------------------------- media query laptop --------------------------- */
@@ -119,7 +121,7 @@ nav a {
     margin-right: 2pc;
   }
   nav a {
-    font-size: 28px;
+    font-size: 2rem;
   }
   nav ul {
     padding-top: 5px;
