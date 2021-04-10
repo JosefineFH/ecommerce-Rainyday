@@ -36,7 +36,6 @@ label::after {
   display: block;
 }
 label {
-  font-family: var(--main-font);
   color: var(--main-color-dark);
 }
 input[type="text"],
@@ -46,7 +45,6 @@ input[type="tel"] {
   border: 1px solid var(--main-color-dark);
   border-radius: 5px;
   padding: 10px;
-  font-family: var(--main-font);
   margin-bottom: 20px;
   outline: none;
 }

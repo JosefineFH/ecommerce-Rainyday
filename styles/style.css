@@ -18,7 +18,9 @@ body {
   margin-right: 0;
 }
 p,
-label {
+label,
+a,
+input {
   font-family: var(--main-font);
 }
 h2,
@@ -149,7 +151,6 @@ div.button {
 .sub_link {
   text-decoration: none;
   color: var(--dark-color);
-  font-family: var(--main-font);
   align-self: center;
 }
 input[type="text"].newsletter__input {
@@ -277,7 +278,6 @@ footer ul a {
   color: var(--orange-color);
   text-decoration: none;
   font-size: 1.5rem;
-  font-family: var(--main-font);
 }
 
 .hiring > a:hover {
