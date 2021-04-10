@@ -23,11 +23,13 @@ a,
 input {
   font-family: var(--main-font);
 }
+h1 {
+  font-size: 4rem;
+}
 h2,
 h1 {
   font-family: var(--naratif-bold);
   text-transform: uppercase;
-  font-size: 3rem;
   position: relative;
   color: var(--main-color-dark);
   text-align: center;
