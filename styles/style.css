@@ -431,10 +431,6 @@ label::after {
   h2 {
     font-size: 3rem;
   }
-  article {
-    width: 900px;
-    margin: 0 auto;
-  }
 
   .aboutUs_grid {
     grid-template-columns: 450px 450px;
