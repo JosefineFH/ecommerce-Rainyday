@@ -1,4 +1,4 @@
-<!-- Hotjar Tracking Code for https://rainydaysecommerce.netlify.app/ -->
+// <!-- Hotjar Tracking Code for https://rainydaysecommerce.netlify.app/ -->
 <script>
     (function(h,o,t,j,a,r){
         h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
