@@ -29,9 +29,9 @@ function formValidation(event){
         outPutError.innerHTML = `<p>Your message has been send to us and we will contact you in 1 - 2 work day's</p>`;
         outPutError.className = "styleMessage";
 
-        // setTimeout(function() {
-        //     form.submit()
-        // }, 3000)
+        setTimeout(function() {
+            form.submit()
+        }, 4000)
         
     }
     
