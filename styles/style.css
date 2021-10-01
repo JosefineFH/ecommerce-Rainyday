@@ -345,6 +345,25 @@ label::after {
     margin-bottom: 30px;
   }
 }
+.styleMessage{
+  border: 2px solid var(--main-color-dark);
+  background: rgba(30, 73, 89,  0.1);
+  color: var(--main-color-dark);
+  border-radius: 4px;
+  padding: 30px;
+  margin: 40px;
+
+}
+
+.error{
+  border: 2px solid darkred;
+  background: rgba(255, 0, 0, 0.1);
+  color: darkred;
+  border-radius: 4px;
+  padding: 30px;
+  margin: 40px;
+
+}
 
 @media screen and (min-width: 1024px) {
   .main_content {
@@ -352,6 +371,11 @@ label::after {
     grid-template-columns: 400px 400px;
     justify-content: center;
     margin-bottom: 30px;
+  }
+  .styleMessage{
+    margin: unset;
+    margin-top: 20px;
+  
   }
 }
 
