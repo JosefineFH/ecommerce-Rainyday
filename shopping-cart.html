@@ -37,26 +37,6 @@
     <title>Rainyday | Shopping Cart</title>
   </head>
   <body>
-    <style>
-      section {
-        /* border: 1px solid red; */
-      }
-
-      .shoppingCartMessage {
-        min-height: 5pc;
-        padding: 70px 0;
-        text-align: center;
-        font-family: var(--naratif-bold);
-        font-weight: bolder;
-        color: var(--main-color-dark);
-        text-transform: uppercase;
-      }
-      .shoppingCartMessage a {
-        text-decoration: underline;
-      }
-      @media screen and (min-width: 1024px) {
-      }
-    </style>
     <header>
       <a href="index.html" class="logo">
         <img class="logo" src="/images/Logo.png" alt="Rainyday Logo" />
@@ -88,16 +68,34 @@
       </div>
     </header>
     <main>
-      <!-- <section>
-        <div class="shoppingCartMessage">
-          <p>You shopping cart is empy</p>
-        </div>
-      </section> -->
+      <style>
+        .product_img {
+          width: 300px;
+        }
+        .button-counter {
+          display: grid;
+          grid-template-columns: 50px 20px 50px;
+          align-items: center;
+          justify-content: center;
+        }
+        .plussButton,
+        .minusButton {
+          max-width: 30px;
+          height: 40px;
+          border-radius: 0;
+          border: none;
+          font-size: unset;
+          margin: auto;
+          padding: unset;
+        }
 
+      </style>
       <section>
         <div class="shoppingCartMessage">
-          <p>You shopping cart is empy</p>
-          <a href="/list-of-jackets.html">Go back to jackets</a>
+          <p>You shopping cart is empty</p>
+          <a href="/list-of-jackets.html"
+            >Go back and look between the selection for jackets</a
+          >
         </div>
         <div id="sections">
           <img
@@ -113,16 +111,16 @@
                   Prize: <span class="checkout-price">NOK </span>
                 </p>
               </div>
-              <div>
-                  <button class="plussButton">+</button>
-                    <p class="storage-count"></p>
-                    <button class="minusButton">-</button>
+              <div class="button-counter">
+                <button class="minusButton">-</button>
+                <p class="storage-count"></p>
+                <button class="plussButton">+</button>
               </div>
             </div>
           </div>
 
           <div class="buttons">
-            <a href="/checkoutCart.html" class="button">go to checkout</a>
+            <a href="/checkoutCart.html" class="goToCheckout button">go to checkout</a>
             <button class="emptyCart">Empty Cart</button>
           </div>
         </div>

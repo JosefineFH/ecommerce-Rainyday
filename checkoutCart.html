@@ -56,9 +56,10 @@
             <img class="product_img vertical-center " src="/images/product-images/woman-jackets/hiker-jacket-mirage.jpg"
                 alt="">
             <h1>Mirage Hiker Jacket</h1>
-            <p class="vertical-center">Prize: <span class="checkout-price">1 399,- NOK</span> </p>
+            <p class="vertical-center">You have order: <span class="orderCount"></span> jackets.</p>
+            <p class="vertical-center">Prize: <span class="checkout-price"></span> NOK</p>
             <div class="personal-info ">
-                <form method="" action="checkout-success.html">
+                <form action="checkout-success.html">
                     <div>
                         <label for="first_name">First Name</label>
                         <input type="text" id="first_name" required>
@@ -180,7 +181,12 @@
             <p>&#169; Josefine Holth Development 2021</p>
         </div>
     </footer>
-
+    <style>
+        .orderCount{
+            color: orangered;
+        }
+    </style>
+    <script src="js/components/checkout-cart.js"></script>
 </body>
 
 </html>

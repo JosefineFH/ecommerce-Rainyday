@@ -13,6 +13,11 @@
   --naratif-thin: "Naratif-Thin", sans-serif;
   --main-font: "Montserrat", sans-serif;
 }
+/* ----------------------------- multi-use code ----------------------------- */
+.vertical-center {
+  display: block;
+  margin: 0 auto;
+}
 
 body {
   margin-right: 0;
@@ -38,10 +43,6 @@ h1 {
 h3 {
   font-family: var(--naratif-bold);
 }
-.vertical-center {
-  display: block;
-  margin: 0 auto;
-}
 
 a {
   text-decoration: none;
@@ -54,9 +55,11 @@ a {
   display: none;
 }
 .show {
-  display: block; 
+  display: block;
 }
-/* ----------------------------- Header section ----------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                               Header section                               */
+/* -------------------------------------------------------------------------- */
 .header-image {
   background-image: url("/images/index-header-img1.jpg");
   background-size: cover;
@@ -76,7 +79,9 @@ a {
   text-shadow: 2px 2px 2px var(--main-light-color);
 }
 
-/* --------------------------- Our Brand - Section -------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                             Our Brand - Section                            */
+/* -------------------------------------------------------------------------- */
 .ourBrand_section {
   display: flex;
   flex-direction: row;
@@ -88,7 +93,9 @@ a {
   width: 20vw;
 }
 
-/* ---------------------------- Product - Section --------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                              Product - Section                             */
+/* -------------------------------------------------------------------------- */
 .products {
   display: flex;
   flex-wrap: wrap;
@@ -130,7 +137,9 @@ div.button {
 .product_card:hover {
   box-shadow: -20px 20px 60px #d6d6d6, 20px -20px 60px #ffffff;
 }
-/* ------------------------------- newsletter ------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                                 newsletter                                 */
+/* -------------------------------------------------------------------------- */
 .newsletter__container {
   background-color: var(--main-color-dark);
   color: var(--dark-color);
@@ -188,7 +197,7 @@ button,
   cursor: pointer;
   border-radius: 20px;
   width: 180px;
-  height: 35px;
+  /* height: 35px; */
   text-transform: uppercase;
   border: 2px solid var(--orange-color);
   background: linear-gradient(145deg, #f24927, #cb3d20);
@@ -210,7 +219,9 @@ button:hover,
 button:focus {
   border: none;
 }
-/* --------------------------- media query tablet --------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                             media query tablet                             */
+/* -------------------------------------------------------------------------- */
 @media screen and (min-width: 600px) {
   .ourBrand_section {
     max-width: 65pc;
@@ -218,7 +229,9 @@ button:focus {
   }
 }
 
-/* --------------------------------- footer --------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                                   Footer                                   */
+/* -------------------------------------------------------------------------- */
 
 footer {
   padding: 10px 0;
@@ -262,7 +275,9 @@ footer ul a {
   width: 50px;
   margin: 0 10px;
 }
-/* ------------------------------ about us page ----------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                                about us page                               */
+/* -------------------------------------------------------------------------- */
 .aboutUs_grid {
   display: grid;
   justify-content: center;
@@ -293,7 +308,9 @@ footer ul a {
   text-decoration: underline;
 }
 
-/* ------------------------------ Contact page ------------------------------ */
+/* -------------------------------------------------------------------------- */
+/*                                Contact page                                */
+/* -------------------------------------------------------------------------- */
 .main_content {
   display: grid;
   justify-content: center;
@@ -350,24 +367,22 @@ label::after {
     margin-bottom: 30px;
   }
 }
-.styleMessage{
+.styleMessage {
   border: 2px solid var(--main-color-dark);
-  background: rgba(30, 73, 89,  0.1);
+  background: rgba(30, 73, 89, 0.1);
   color: var(--main-color-dark);
   border-radius: 4px;
   padding: 30px;
   margin: 40px;
-
 }
 
-.error{
+.error {
   border: 2px solid darkred;
   background: rgba(255, 0, 0, 0.1);
   color: darkred;
   border-radius: 4px;
   padding: 30px;
   margin: 40px;
-
 }
 
 @media screen and (min-width: 1024px) {
@@ -377,14 +392,15 @@ label::after {
     justify-content: center;
     margin-bottom: 30px;
   }
-  .styleMessage{
+  .styleMessage {
     margin: unset;
     margin-top: 20px;
-  
   }
 }
 
-/* ---------------------------- checkout success ---------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                              checkout success                              */
+/* -------------------------------------------------------------------------- */
 .section {
   display: grid;
   justify-content: center;
@@ -409,7 +425,9 @@ label::after {
   }
 }
 
-/* --------------------------- Tablet media queri --------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                             Tablet media queri                             */
+/* -------------------------------------------------------------------------- */
 @media screen and (min-width: 600px) {
   .header-image {
     min-height: 300px;
@@ -448,7 +466,9 @@ label::after {
     grid-template-columns: 1fr 1fr;
   }
 }
-/* --------------------------- Laptop media queri --------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                             Laptop media queri                             */
+/* -------------------------------------------------------------------------- */
 @media screen and (min-width: 1024px) {
   .header-image {
     min-height: 490px;
@@ -496,17 +516,38 @@ label::after {
 /* -------------------------------------------------------------------------- */
 /*                             shopping-cart.html                             */
 /* -------------------------------------------------------------------------- */
-.buttons{
-  margin-top: 20px;
+.buttons {
+  margin: 20px 0;
   display: flex;
   justify-content: space-around;
-  align-items: center;
-
+  max-width: 800px;
+  margin: 20px auto;
+  /* align-items: center; */
 }
-.button.button{
+.button.button {
   margin-top: unset;
 }
-.priceCount{
+.priceCount {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  align-items: center;
+  max-width: 800px;
+  margin: 0 auto;
+
+  font-size: 25px;
+}
+.vertical-center {
+  text-align: center;
+}
+.shoppingCartMessage {
+  min-height: 5pc;
+  padding: 70px 0;
+  text-align: center;
+  font-family: var(--naratif-bold);
+  font-weight: bolder;
+  color: var(--main-color-dark);
+  text-transform: uppercase;
+}
+.shoppingCartMessage a {
+  text-decoration: underline;
 }
