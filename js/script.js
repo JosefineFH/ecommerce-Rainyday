@@ -1,11 +1,10 @@
-console.log("Conected JS file")
 let shoppingCartStorage = window.localStorage.getItem('itemsInShoppingCount');
 
 let shoppingCart = document.querySelector("#addToCart");
 let shoppingCartCounter = document.querySelector(".shppingCardCounter");
 
 const addToCartButton = document.querySelector("#addToCart");
-const cartContent = document.querySelector(".cartContent");
+const cartContent = document.querySelector(".overlay");
 const closeButton = document.querySelector("#closeWindow");
 
 
@@ -17,6 +16,7 @@ function displayShoppingCartCount() {
 
     if (shoppingCartStorage === null) {
         shoppingCartStorage = 0;
+
     } else {
         shoppingCartCounter.innerHTML = `${shoppingCartStorage}`;
     }

@@ -7,11 +7,6 @@ const outPutError = document.querySelector(".message")
 function formValidation(event){
     event.preventDefault();
     outPutError.innerHTML = "";
-
-
-    // console.log(`${email.value}`);
-    
-    // console.log(`${message.value}`);
     
     if(!lenghtCheck(name.value, 0) === true){
         outPutError.innerHTML += `<p> - Your name is missing of filled in incorrectly</p>`;

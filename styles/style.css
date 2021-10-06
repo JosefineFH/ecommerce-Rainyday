@@ -50,7 +50,12 @@ a {
 .img_section img {
   width: 100%;
 }
-
+.hide {
+  display: none;
+}
+.show {
+  display: block; 
+}
 /* ----------------------------- Header section ----------------------------- */
 .header-image {
   background-image: url("/images/index-header-img1.jpg");
@@ -487,4 +492,21 @@ label::after {
     font-size: 8pc;
     top: 5pc;
   }
+}
+/* -------------------------------------------------------------------------- */
+/*                             shopping-cart.html                             */
+/* -------------------------------------------------------------------------- */
+.buttons{
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+}
+.button.button{
+  margin-top: unset;
+}
+.priceCount{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
