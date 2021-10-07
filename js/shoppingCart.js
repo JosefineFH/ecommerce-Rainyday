@@ -1,6 +1,6 @@
 const shoppingCart = document.querySelector("#sections");
 const shoppingCartMessage = document.querySelector(".shoppingCartMessage");
-let shoppingCartStorage = window.localStorage.getItem('itemsInShoppingCount');
+let shoppingCartItemStorage = window.localStorage.getItem('itemsInShoppingCount');
 
 const productCountShow = document.querySelector(".priceCount");
 
@@ -18,18 +18,18 @@ displayShoppingCart();
 
 function displayShoppingCart() {
 
-    if (shoppingCartStorage === null || shoppingCartStorage === "0") {
+    if (shoppingCartItemStorage === null || shoppingCartItemStorage === "0") {
         shoppingCart.classList.add("hide");
 
     } else {
         shoppingCartMessage.classList.add("hide");
 
-        totalPrice = jacketPrice * shoppingCartStorage;
+        totalPrice = jacketPrice * shoppingCartItemStorage;
 
         count.innerHTML += `${totalPrice}`;
-        jacketCount.innerHTML += `${shoppingCartStorage}`;
+        jacketCount.innerHTML += `${shoppingCartItemStorage}`;
     }
-    if (shoppingCartStorage === "0") {
+    if (shoppingCartItemStorage === "0") {
         console.log("empty");
         minusButton.disabled = true;
         shoppingCart.classList.add("hide");
@@ -51,10 +51,10 @@ emptyCart.addEventListener("click", emptyShoppingCart);
 const plussButton = document.querySelector(".plussButton");
 
 function pluss() {
-    shoppingCartStorage++;
+    shoppingCartItemStorage++;
 
-    window.localStorage.setItem('itemsInShoppingCount', shoppingCartStorage);
-    jacketCount.innerHTML = `${shoppingCartStorage}`
+    window.localStorage.setItem('itemsInShoppingCount', shoppingCartItemStorage);
+    jacketCount.innerHTML = `${shoppingCartItemStorage}`
 
     location.reload();
 }
@@ -65,10 +65,10 @@ const minusButton = document.querySelector(".minusButton");
 
 function minus() {
     console.log("minus");
-    shoppingCartStorage--;
+    shoppingCartItemStorage--;
 
-    window.localStorage.setItem('itemsInShoppingCount', shoppingCartStorage);
-    jacketCount.innerHTML = `${shoppingCartStorage}`
+    window.localStorage.setItem('itemsInShoppingCount', shoppingCartItemStorage);
+    jacketCount.innerHTML = `${shoppingCartItemStorage}`
 
     location.reload();
 }

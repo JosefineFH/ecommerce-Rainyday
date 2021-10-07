@@ -1,7 +1,7 @@
-let shoppingCartStorage = window.localStorage.getItem('itemsInShoppingCount');
+// let shoppingCartStorage = window.localStorage.getItem('itemsInShoppingCount');
 
 let shoppingCart = document.querySelector("#addToCart");
-let shoppingCartCounter = document.querySelector(".shppingCardCounter");
+// let shoppingCartCounter = document.querySelector(".shppingCardCounter");
 
 const addToCartButton = document.querySelector("#addToCart");
 const cartContent = document.querySelector(".overlay");
@@ -11,16 +11,16 @@ const closeButton = document.querySelector("#closeWindow");
 /* -------------------------------------------------------------------------- */
 /*                       Displays count on shopping card                      */
 /* -------------------------------------------------------------------------- */
-displayShoppingCartCount();
-function displayShoppingCartCount() {
+// displayShoppingCartCount();
+// function displayShoppingCartCount() {
 
-    if (shoppingCartStorage === null) {
-        shoppingCartStorage = 0;
+//     if (shoppingCartStorage === null) {
+//         shoppingCartStorage = 0;
 
-    } else {
-        shoppingCartCounter.innerHTML = `${shoppingCartStorage}`;
-    }
-}
+//     } else {
+//         shoppingCartCounter.innerHTML = `${shoppingCartStorage}`;
+//     }
+// }
 
 /* -------------------------------------------------------------------------- */
 /*                    Adds number to shopping card counter                    */
