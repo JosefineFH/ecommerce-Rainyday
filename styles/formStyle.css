@@ -1,0 +1,10 @@
+.content {
+  display: none;
+}
+.content.show {
+  display: block; /* P.S: Use `!important` if missing `#content` (selector specificity). */
+}
+
+.content.hide {
+  display: none;
+}
