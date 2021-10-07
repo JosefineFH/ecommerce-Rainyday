@@ -57,14 +57,11 @@
         </nav>
         <div class="nav_shop">
           <a href="/shopping-cart.html">
-            <img
-              class="shopping-cart"
-              src="/images/icons/shopping-cart.png"
-              alt="Your shopping cart"
-            />
+            <img class="shopping-cart" src="/images/icons/shopping-cart.png" alt="Your shopping cart">
           </a>
-          <span class="shppingCardCounter"></span>
+          <span class="shoppingCardCounter"></span>
         </div>
+  </div>
       </div>
     </header>
     <main>
@@ -88,7 +85,9 @@
           margin: auto;
           padding: unset;
         }
-
+        #sections{
+          margin-top: 7pc;
+        }
       </style>
       <section>
         <div class="shoppingCartMessage">
@@ -120,7 +119,9 @@
           </div>
 
           <div class="buttons">
-            <a href="/checkoutCart.html" class="goToCheckout button">go to checkout</a>
+            <a href="/checkoutCart.html" class="goToCheckout button"
+              >go to checkout</a
+            >
             <button class="emptyCart">Empty Cart</button>
           </div>
         </div>
@@ -177,6 +178,8 @@
         <p>&#169; Josefine Holth Development 2021</p>
       </div>
     </footer>
-    <script src="js/components/shoppingCart.js"></script>
+    <script src="js/components/display-shopping-cart.js"></script>
+    <!-- <script src="js/script.js"></script> -->
+    <script src="js/shoppingCart.js"></script>
   </body>
 </html>
