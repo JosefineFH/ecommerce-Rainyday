@@ -38,52 +38,73 @@ const cardCvcNumber = document.querySelector("#cvc_number");
 const cardholdersName = document.querySelector("#cardholder_name");
 let paymentValidation = false;
 
-// toggle.addEventListener("click", function() {
-//     content.classList.toggle("show");
-//   });
 const toggleName = document.querySelector(".toggle_name");
 const toggleAddressInfo = document.querySelector(".toggle_address_info");
 const toggleDeliveryOption = document.querySelector(".toggle_delivery_info");
 const togglePaymentOption = document.querySelector(".toggle_payment_info");
+const submitButton = document.querySelector(".submit_button");
 
+/* --------------------------- span error messages -------------------------- */
+const errorMessageFirstName = document.querySelector(".error_first_name");
+const errorMessageLastName = document.querySelector(".error_last_name");
+const errorPhoneNumber = document.querySelector(".error_phone_number");
+const errorAddress = document.querySelector(".error_address");
+const errorCity = document.querySelector(".error_city");
+const errorZipCode = document.querySelector(".error_zip_code");
+const errorDelivery = document.querySelector(".error_delivery");
+const errorCardNumber = document.querySelector(".error_card_number")
+const errorExpirationDate = document.querySelector(".error_expire_date")
+const errorCVC = document.querySelector(".error_cvc")
+const errorCardHolderName = document.querySelector(".error_cardholder_name")
+
+/* -------------------------------- functions ------------------------------- */
 function nameValidationCheck() {
-    console.log("name function triggerd");
+    if (!lengthCheck(firstName.value, 0) === true) {
+        errorMessageFirstName.innerHTML = "* Your first name is missing";
 
-    if (!lengthCheck(firstName.value, 0) === true && !lengthCheck(lastName.value, 0) === true && !lengthCheck(phoneNumber.value, 8) === true) {
-        if (!lengthCheck(firstName.value, 0) === true) {
-            console.log("Your first name is missing")
-        }
-        if (!lengthCheck(lastName.value, 0) === true) {
-            console.log("Your last name is missing")
-        }
-        if (!lengthCheck(phoneNumber.value, 8) === true) {
-            console.log("Your phone number is missing")
-        }
     } else {
+        errorMessageFirstName.style.display = "none"
+    }
+    if (!lengthCheck(lastName.value, 0) === true) {
+        errorMessageLastName.innerHTML = "* Your last name is missing";
+    } else {
+        errorMessageLastName.style.display = "none";
+    }
+    if (!lengthCheck(phoneNumber.value, 7) === true) {
+        errorPhoneNumber.innerHTML = "* Your phone number is missing";
+    } else {
+        errorPhoneNumber.style.display = "none"
+    }
+    if (lengthCheck(firstName.value, 0) === true && lengthCheck(lastName.value, 0) === true && lengthCheck(phoneNumber.value, 8) === true) {
         nameinfo.classList.add("hide")
-
         addressInfo.classList.remove("hide")
         addressInfo.classList.add("show");
-
+        if (nameinfo.classList.contains("hide")) {
+            console.log("fix this shit with the buttons");
+        }
         persenolValidation = true;
     }
 }
 
 function addressValidationCheck() {
-    console.log("Validating address");
+    toggleName.style.display = "none";
 
-    if (!lengthCheck(address.value, 0) === true && !lengthCheck(city.value, 0) === true && !lengthCheck(zipCode.value, 4) === true) {
-        console.log("Your address is missing")
-        if (!lengthCheck(address.value, 0) === true) {
-            console.log("address is missing")
-        }
-        if (!lengthCheck(city.value, 0) === true) {
-            console.log("Your city is missing")
-        }
-        if (!lengthCheck(zipCode.value, 4) === true) {
-            console.log("Your zipCode is missing")
-        }
+    if (!lengthCheck(address.value, 0) === true) {
+        errorAddress.innerHTML = "* Address is missing";
     } else {
+        errorAddress.style.display = "none";
+    }
+    if (!lengthCheck(city.value, 0) === true) {
+        errorCity.innerHTML = "* City is missing";
+    } else {
+        errorCity.style.display = "none";
+    }
+    if (!lengthCheck(zipCode.value, 4) === true) {
+        errorZipCode.innerHTML = "* Your zip code is missing or to short";
+    } else {
+        errorZipCode.style.display = "none";
+    }
+    if (lengthCheck(address.value, 0) === true && lengthCheck(city.value, 0) === true && lengthCheck(zipCode.value, 3) === true) {
         addressInfo.classList.remove("show");
         addressInfo.classList.add("hide");
 
@@ -94,12 +115,25 @@ function addressValidationCheck() {
     }
 }
 
-function deliveryValidationCheck() {
-    console.log("delivery check");
-
-    if (!deliveryPostenNorway.checked === true || deliveryPickUpPoint.checked === true) {
-        console.log("Your delivery option is missing");
+deliveryPostenNorway.onclick = function () {
+    if (deliveryPostenNorway.checked == true) {
+        deliveryPickUpPoint.disabled = true;
     } else {
+        deliveryPickUpPoint.disabled = false;
+    }
+}
+
+deliveryPickUpPoint.onclick = function () {
+    if (deliveryPickUpPoint.checked == true) {
+        deliveryPostenNorway.disabled = true
+    } else {
+        deliveryPickUpPoint.disabled = false;
+    }
+}
+
+
+function deliveryValidationCheck() {
+    if (deliveryPostenNorway.checked == true || deliveryPickUpPoint.checked == true) {
         deliveryValidation = true;
 
         deliveryOptions.classList.remove("show");
@@ -107,56 +141,52 @@ function deliveryValidationCheck() {
 
         paymentOption.classList.remove("hide");
         paymentOption.classList.add("show");
-
-
+    } else {
+        errorDelivery.innerHTML = "* You have to choose a delivery method";
+        console.log("this is not true")
     }
 }
 
 function paymentValidationCheck() {
     console.log("payment check");
-    if (!lengthCheck(cardNumber.value, 4) === true && !lengthCheck(cardExpirationDate.value, 4) === true && !lengthCheck(cardCvcNumber.value, 3) === true && !lengthCheck(cardholdersName.value, 0) === true) {
-        if (!lengthCheck(cardNumber.value, 4) === true) {
-            console.log("Your card number is missing")
-        }
-        if (!lengthCheck(cardExpirationDate.value, 4) === true) {
-            console.log("Your card Expiration Date is missing")
-        }
-        if (!lengthCheck(cardCvcNumber.value, 3) === true) {
-            console.log("Your card Number is missing")
-        }
-        if (!lengthCheck(cardholdersName.value, 0) === true) {
-            console.log("Your card holders Name is missing")
-        }
+
+    if (!lengthCheck(cardNumber.value, 4) === true) {
+        errorCardNumber.innerHTML = "* Credit card number missing or to short"
     } else {
+        errorCardNumber.style.display = "none";
+    }
+    if (!lengthCheck(cardExpirationDate.value, 4) === true) {
+        errorExpirationDate.innerHTML = "* The expiration date has not been filled out or has the wrong format"
+    } else {
+        errorExpirationDate.style.display = "none";
+    }
+    if (!lengthCheck(cardCvcNumber.value, 3) === true) {
+        errorCVC.innerHTML = "* CVC number is missing or to short";
+    } else {
+        errorCVC.style.display = "none";
+    }
+    if (!lengthCheck(cardholdersName.value, 0) === true) {
+        errorCardHolderName.innerHTML = "* The card holder name is missing";
+    } else {
+        errorCardHolderName.style.display = "none";
+    }
+    if (lengthCheck(cardNumber.value, 4) === true && lengthCheck(cardExpirationDate.value, 4) === true && lengthCheck(cardCvcNumber.value, 3) === true && lengthCheck(cardholdersName.value, 0) === true) {
         paymentValidation = true;
     }
 }
 
-
-toggleName.addEventListener("click", nameValidationCheck)
-toggleDeliveryOption.addEventListener("click", deliveryValidationCheck);
-
-toggleAddressInfo.addEventListener("click", addressValidationCheck);
-togglePaymentOption.addEventListener("click", paymentValidationCheck);
-
-
 function checkoutValidation(event) {
     event.preventDefault();
 
-    if(persenolValidation === true && addressValidation === true && deliveryValidation === true && paymentValidation === true){
-        console.log("Your order has been send to us")
-    } else {
-        console.log("info is missing")
+    if (persenolValidation === true && addressValidation === true && deliveryValidation === true && paymentValidation === true) {
+        setTimeout(function () {
+            form.submit();
+            window.location.replace('/checkout_success.html')
+        }, 1000)
     }
 }
 
-
-
-
-
-
-
-
+form.addEventListener("submit", checkoutValidation);
 
 /* -------------------------------------------------------------------------- */
 /*                              Validation rules                              */
@@ -175,4 +205,22 @@ function lengthCheck(value, len) {
     }
 }
 
-form.addEventListener("submit", checkoutValidation);
+function concoleThis() {
+    console.log("does this work?");
+}
+
+toggleName.onclick = function () {
+    nameValidationCheck();
+}
+toggleAddressInfo.onclick = function () {
+    addressValidationCheck()
+    concoleThis();
+}
+toggleDeliveryOption.onclick = function () {
+    console.log("delivery options")
+    deliveryValidationCheck()
+}
+togglePaymentOption.onclick = function () {
+    console.log("Payment option function");
+    paymentValidationCheck()
+}
