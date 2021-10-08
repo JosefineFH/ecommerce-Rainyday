@@ -1,4 +1,3 @@
-// let shoppingCartStorage = window.localStorage.getItem('itemsInShoppingCount');
 let shoppingStoragePrice = window.localStorage.getItem('shoppingPrice');
 
 let orderCount = document.querySelector(".orderCount");
@@ -9,7 +8,6 @@ const form = document.querySelector("form");
 orderCount.innerHTML = shoppingCartStorage;
 checkoutPrice.innerHTML = shoppingStoragePrice;
 
-const toggle = document.querySelector(".toggleName");
 const nameinfo = document.querySelector(".nameInfo");
 const addressInfo = document.querySelector(".address_info");
 const deliveryInfo = document.querySelector(".delivery_info");
@@ -38,6 +36,7 @@ const cardCvcNumber = document.querySelector("#cvc_number");
 const cardholdersName = document.querySelector("#cardholder_name");
 let paymentValidation = false;
 
+const toggle = document.querySelector(".toggle_name");
 const toggleName = document.querySelector(".toggle_address");
 
 const toggleAddressInfo = document.querySelector(".toggle_delivery_info");
@@ -79,17 +78,18 @@ function nameValidationCheck() {
     if (lengthCheck(firstName.value, 0) === true && lengthCheck(lastName.value, 0) === true && lengthCheck(phoneNumber.value, 8) === true) {
         nameinfo.style.display = "none"
         addressInfo.style.display = "unset"
-        
-        if (nameinfo.classList.contains("hide")) {
-            console.log("fix this shit with the buttons");
-        }
+        deliveryOptions.style.display = "none"
+
+        toggleName.style.display = "none";
+        toggle.style.display = "unset"
+
+        toggleAddressInfo.style.display = "unset";
+
         persenolValidation = true;
     }
 }
 
 function addressValidationCheck() {
-    // toggleName.style.display = "none";
-
     if (!lengthCheck(address.value, 0) === true) {
         errorAddress.innerHTML = "* Address is missing";
     } else {
@@ -106,9 +106,14 @@ function addressValidationCheck() {
         errorZipCode.style.display = "none";
     }
     if (lengthCheck(address.value, 0) === true && lengthCheck(city.value, 0) === true && lengthCheck(zipCode.value, 3) === true) {
-        addressInfo.style.display  = "none";
+        nameinfo.style.display = "none"
+        addressInfo.style.display = "none";
         deliveryOptions.style.display = "unset"
 
+        toggleName.style.display = "unset";
+        toggleAddressInfo.style.display = "none";
+
+        toggle.style.display = "unset"
         addressValidation = true;
     }
 }
@@ -131,27 +136,37 @@ deliveryPickUpPoint.onclick = function () {
 
 
 function deliveryValidationCheck() {
+
     if (deliveryPostenNorway.checked == true || deliveryPickUpPoint.checked == true) {
         deliveryValidation = true;
-        
+
         deliveryOptions.style.display = "none";
+
+        pymentInfo.style.display = "unset"
+        nameinfo.style.display = "none"
+        addressInfo.style.display = "none";
         
-        paymentOption.style.display ="unset"
+
+        toggleAddressInfo.classList.add("hideButton");
+        console.log(deliveryValidation)
+
+        if (toggleAddressInfo.classList.contains = "hideButton") {
+            toggleAddressInfo.style.display = "unset"
+        }
     } else {
         errorDelivery.innerHTML = "* You have to choose a delivery method";
-        console.log("this is not true")
     }
 }
 
 function paymentValidationCheck() {
-    console.log("payment check");
 
-    if (!lengthCheck(cardNumber.value, 4) === true) {
+
+    if (!lengthCheck(cardNumber.value, 3) === true) {
         errorCardNumber.innerHTML = "* Credit card number missing or to short"
     } else {
         errorCardNumber.style.display = "none";
     }
-    if (!lengthCheck(cardExpirationDate.value, 4) === true) {
+    if (!lengthCheck(cardExpirationDate.value, 5) === true) {
         errorExpirationDate.innerHTML = "* The expiration date has not been filled out or has the wrong format"
     } else {
         errorExpirationDate.style.display = "none";
@@ -168,6 +183,8 @@ function paymentValidationCheck() {
     }
     if (lengthCheck(cardNumber.value, 4) === true && lengthCheck(cardExpirationDate.value, 4) === true && lengthCheck(cardCvcNumber.value, 3) === true && lengthCheck(cardholdersName.value, 0) === true) {
         paymentValidation = true;
+        toggle.display.style = "unset";
+
     }
 }
 
@@ -176,6 +193,8 @@ function checkoutValidation(event) {
 
     if (persenolValidation === true && addressValidation === true && deliveryValidation === true && paymentValidation === true) {
         setTimeout(function () {
+            window.localStorage.clear('shoppingPrice');
+            window.localStorage.clear('itemsInShoppingCount');
             form.submit();
             window.location.replace('/checkout_success.html')
         }, 1000)
@@ -201,21 +220,39 @@ function lengthCheck(value, len) {
     }
 }
 
-function concoleThis() {
-    console.log("does this work?");
-}
-
 toggleName.onclick = function () {
     nameValidationCheck();
+    pymentInfo.style.display = "none";
+    togglePaymentOption.style.display = "unset"
+    toggleDeliveryOption.style.display = "unset"
+
 }
 toggleAddressInfo.onclick = function () {
     addressValidationCheck()
+    pymentInfo.style.display = "none"
 }
 toggleDeliveryOption.onclick = function () {
     console.log("delivery options")
     deliveryValidationCheck()
+
 }
 togglePaymentOption.onclick = function () {
     console.log("Payment option function");
     paymentValidationCheck()
+
+
+}
+toggle.onclick = function () {
+    nameinfo.style.display = "unset";
+    addressInfo.style.display = "none";
+
+    toggleName.style.display = "unset";
+    toggle.style.display = "none"
+
+    deliveryOptions.style.display = "none"
+    toggleAddressInfo.style.display = "unset";
+
+    pymentInfo.style.display = "none";
+
+    toggleDeliveryOption.style.display = "unset"
 }
