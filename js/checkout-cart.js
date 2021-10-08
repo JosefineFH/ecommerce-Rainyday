@@ -38,10 +38,11 @@ const cardCvcNumber = document.querySelector("#cvc_number");
 const cardholdersName = document.querySelector("#cardholder_name");
 let paymentValidation = false;
 
-const toggleName = document.querySelector(".toggle_name");
-const toggleAddressInfo = document.querySelector(".toggle_address_info");
-const toggleDeliveryOption = document.querySelector(".toggle_delivery_info");
-const togglePaymentOption = document.querySelector(".toggle_payment_info");
+const toggleName = document.querySelector(".toggle_address");
+
+const toggleAddressInfo = document.querySelector(".toggle_delivery_info");
+const toggleDeliveryOption = document.querySelector(".toggle_payment_info");
+const togglePaymentOption = document.querySelector(".payment");
 const submitButton = document.querySelector(".submit_button");
 
 /* --------------------------- span error messages -------------------------- */
@@ -76,9 +77,9 @@ function nameValidationCheck() {
         errorPhoneNumber.style.display = "none"
     }
     if (lengthCheck(firstName.value, 0) === true && lengthCheck(lastName.value, 0) === true && lengthCheck(phoneNumber.value, 8) === true) {
-        nameinfo.classList.add("hide")
-        addressInfo.classList.remove("hide")
-        addressInfo.classList.add("show");
+        nameinfo.style.display = "none"
+        addressInfo.style.display = "unset"
+        
         if (nameinfo.classList.contains("hide")) {
             console.log("fix this shit with the buttons");
         }
@@ -87,7 +88,7 @@ function nameValidationCheck() {
 }
 
 function addressValidationCheck() {
-    toggleName.style.display = "none";
+    // toggleName.style.display = "none";
 
     if (!lengthCheck(address.value, 0) === true) {
         errorAddress.innerHTML = "* Address is missing";
@@ -105,11 +106,8 @@ function addressValidationCheck() {
         errorZipCode.style.display = "none";
     }
     if (lengthCheck(address.value, 0) === true && lengthCheck(city.value, 0) === true && lengthCheck(zipCode.value, 3) === true) {
-        addressInfo.classList.remove("show");
-        addressInfo.classList.add("hide");
-
-        deliveryOptions.classList.remove("hide");
-        deliveryOptions.classList.add("show");
+        addressInfo.style.display  = "none";
+        deliveryOptions.style.display = "unset"
 
         addressValidation = true;
     }
@@ -135,12 +133,10 @@ deliveryPickUpPoint.onclick = function () {
 function deliveryValidationCheck() {
     if (deliveryPostenNorway.checked == true || deliveryPickUpPoint.checked == true) {
         deliveryValidation = true;
-
-        deliveryOptions.classList.remove("show");
-        deliveryOptions.classList.add("hide");
-
-        paymentOption.classList.remove("hide");
-        paymentOption.classList.add("show");
+        
+        deliveryOptions.style.display = "none";
+        
+        paymentOption.style.display ="unset"
     } else {
         errorDelivery.innerHTML = "* You have to choose a delivery method";
         console.log("this is not true")
@@ -214,7 +210,6 @@ toggleName.onclick = function () {
 }
 toggleAddressInfo.onclick = function () {
     addressValidationCheck()
-    concoleThis();
 }
 toggleDeliveryOption.onclick = function () {
     console.log("delivery options")
