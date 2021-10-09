@@ -25,9 +25,10 @@ header {
 header img {
   height: 2pc;
 }
-ion-icon {
+ion-icon .fas {
   font-size: 3rem;
   color: var(--main-color-dark);
+  margin-top: 8px;
 }
 header label {
   position: relative;

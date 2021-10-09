@@ -1,297 +1,227 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Hotjar Tracking Code for https://rainydaysecommerce.netlify.app/ -->
-    <script>
-      (function (h, o, t, j, a, r) {
-        h.hj =
-          h.hj ||
-          function () {
-            (h.hj.q = h.hj.q || []).push(arguments);
-          };
-        h._hjSettings = { hjid: 2605195, hjsv: 6 };
-        a = o.getElementsByTagName("head")[0];
-        r = o.createElement("script");
-        r.async = 1;
-        r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
-        a.appendChild(r);
-      })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
-    </script>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Online shop selling men's and woman's rain jackets for outdoor activites"
-    />
-    <meta
-      name="keywords"
-      content="Jackets, outdoor, activites, hiking, skiing, camping,canoeing "
-    />
-    <meta name="author" content="Josefine Holth Development" />
-    <link rel="icon" href="/images/Logo.png" type="image/x-icon" />
-    <link rel="stylesheet" href="/styles/navbar.css" />
-    <link rel="stylesheet" href="/styles/style.css" />
-    <link rel="stylesheet" href="/styles/checkout.css" />
 
-    <link rel="stylesheet" href="/styles/formStyle.css" />
-    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
-    <title>Rainyday | Shopping Cart</title>
-  </head>
+<head>
+  <!-- Hotjar Tracking Code for https://rainydaysecommerce.netlify.app/ -->
+  <script>
+    (function (h, o, t, j, a, r) {
+      h.hj =
+        h.hj ||
+        function () {
+          (h.hj.q = h.hj.q || []).push(arguments);
+        };
+      h._hjSettings = { hjid: 2605195, hjsv: 6 };
+      a = o.getElementsByTagName("head")[0];
+      r = o.createElement("script");
+      r.async = 1;
+      r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+      a.appendChild(r);
+    })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
+  </script>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Online shop selling men's and woman's rain jackets for outdoor activites" />
+  <meta name="keywords" content="Jackets, outdoor, activites, hiking, skiing, camping,canoeing " />
+  <meta name="author" content="Josefine Holth Development" />
+  <link rel="icon" href="/images/Logo.png" type="image/x-icon" />
+  <link rel="stylesheet" href="/styles/navbar.css" />
+  <link rel="stylesheet" href="/styles/style.css" />
+  <link rel="stylesheet" href="/styles/checkout.css" />
 
-  <body>
-    <style>
-      .error_style {
-        color: red;
-      }
-      .content {
-        display: none;
-      }
-      .content.show {
-        display: block; /* P.S: Use `!important` if missing `#content` (selector specificity). */
-      }
-    </style>
-    <header>
-      <a href="index.html" class="logo">
-        <img class="logo" src="/images/Logo.png" alt="Rainyday Logo" />
-      </a>
-      <div class="menu-items">
-        <label for="dropdown-menu">
-          <ion-icon name="menu-outline"></ion-icon>
-        </label>
-        <input type="checkbox" id="dropdown-menu" />
-        <nav>
-          <ul>
-            <li><a href="/list-of-jackets.html#men-jackets">men</a></li>
-            <li><a href="/list-of-jackets.html#woman-jackets">woman</a></li>
-            <li><a href="/list-of-jackets.html">jackets</a></li>
-            <li><a href="/contact.html">contact</a></li>
-            <li><a href="/about.html">about</a></li>
-          </ul>
-        </nav>
-        <div class="nav_shop">
-          <a href="/shopping-cart.html">
-            <img
-              class="shopping-cart"
-              src="/images/icons/shopping-cart.png"
-              alt="Your shopping cart"
-            />
-          </a>
-          <span class="shoppingCardCounter"></span>
-        </div>
-      </div>
-    </header>
-    <main>
-      <section class="section">
-        <img
-          class="product_img vertical-center"
-          src="/images/product-images/woman-jackets/hiker-jacket-mirage.jpg"
-          alt=""
-        />
-        <h1>Mirage Hiker Jacket</h1>
-        <p class="vertical-center">
-          You have order: <span class="orderCount"></span> jackets.
-        </p>
-        <p class="vertical-center">
-          Prize: <span class="checkout-price"></span> NOK
-        </p>
-        <div class="personal-info">
-          <form>
-            <section class="nameInfo content show">
-              <div>
-                <label for="first_name"
-                  >First Name <span class="error_first_name error_style"></span
-                ></label>
-                <input type="text" id="first_name" name="first_name" />
-              </div>
+  <link rel="stylesheet" href="/styles/formStyle.css" />
+  <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+  <title>Rainyday | Shopping Cart</title>
+</head>
 
-              <div>
-                <label for="last_name"
-                  >Last Name <span class="error_last_name error_style"></span
-                ></label>
-                <input type="text" id="last_name" name="last_name" />
-              </div>
-              <div>
-                <label for="phone_number"
-                  >Phone number
-                  <span class="error_phone_number error_style"></span
-                ></label>
-                <input type="tel" id="phone_number" name="phone_number" />
-              </div>
-            </section>
-            <button class="toggle_address">Address Info</button>
+<body>
+  <style>
+    .error_style {
+      color: red;
+    }
 
-            <button class="toggle_name" style="display: none;">Name info</button>
-            <section class="address_info content hide">
-              <div>
-                <label for="address"
-                  >Address
-                  <span class="error_address error_style error_style"></span
-                ></label>
-                <input type="text" id="address" name="address" />
-              </div>
+    .content {
+      display: none;
+    }
 
-              <div class="city_code">
-                <div>
-                  <label for="city"
-                    >City <span class="error_city error_style"></span
-                  ></label>
-                  <input type="text" id="city" name="city" />
-                </div>
-                <div>
-                  <label for="zip_code"
-                    >ZIP Code <span class="error_zip_code error_style"></span
-                  ></label>
-                  <input type="number" id="zip_code" name="zip_code" />
-                </div>
-              </div>
-            </section>
-            <button class="toggle_delivery_info">Delivery Options</button>
-
-            <section class="delivery_options content hide">
-              <p class="error_delivery error_style error_style"></p>
-              <div class="delivery_option vertical-center">
-                <div class="delivery_option_text">
-                  <p>To The Store Nearby (0,00)</p>
-                  <p>Rema 1000 Oslo, Norway 9090, Osloveien 01</p>
-                </div>
-                <div class="delivery_logo">
-                  <img
-                    class="logo_img"
-                    src="/images/postenlogo.png"
-                    alt="Delivery with Posten Norway"
-                  />
-
-                  <label for="delivery-Posten-Norway"></label>
-                  <input
-                    type="checkbox"
-                    id="delivery-Posten-Norway"
-                    name="delivery-Posten-Norway"
-                  />
-                </div>
-              </div>
-              <div class="delivery_option vertical-center">
-                <div class="delivery_option_text">
-                  <p>Pick-Up-Point (40,00)</p>
-                  <p>Pick-Up-Point Oslo, Norway 9090, Osloveien 100</p>
-                </div>
-                <div class="delivery_logo">
-                  <img
-                    src="/images/Logo.png"
-                    alt="Delivery with Posten Norway"
-                  />
-
-                  <label for="delivery-pick-up-point"></label>
-                  <input
-                    type="checkbox"
-                    id="delivery-pick-up-point"
-                    name="delivery-pick-up-point"
-                  />
-                </div>
-              </div>
-            </section>
-            <button class="toggle_payment_info">Payment options</button>
-
-            <section class="payment_info content hide">
-              <img
-                class="vertical-center"
-                src="/images/visa_card.png"
-                alt="Card info"
-              />
-              <div class="cardin_info">
-                <div>
-                  <label for="card_number"
-                    >Card Number - 4 numbers<span
-                      class="error_card_number error_style"
-                    ></span
-                  ></label>
-                  <input type="number" id="card_number" name="card_number" />
-                </div>
-                <div>
-                  <label for="expiration_date"
-                    >Expiration date DD/MM/YY
-                    <span class="error_expire_date error_style"></span
-                  ></label>
-                  <input
-                    type="number"
-                    id="expiration_date"
-                    name="expiration_date"
-                  />
-                </div>
-                <div>
-                  <label for="cvc_number"
-                    >CVC - 4 numbers<span class="error_cvc error_style"></span
-                  ></label>
-                  <input type="number" id="cvc_number" name="cvc_number" />
-                </div>
-              </div>
-              <label for="cardholder_name"
-                >Card holder name
-                <span class="error_cardholder_name error_style"></span
-              ></label>
-              <input type="text" id="cardholder_name" name="cardholder_name" />
-              <div></div>
-              <!-- <button class="toggle_payment_info">Info 4</button> -->
-              <input class="payment"" button vertical-center" type="submit"
-              value="Finish your purchase"/>
-            </section>
-          </form>
-        </div>
-      </section>
-    </main>
-    <footer>
-      <div>
-        <img
-          class="logo"
-          src="/images/RainyDays_Logo_white.png"
-          alt="Rainydays white logo"
-        />
-      </div>
-      <div class="links">
+    .content.show {
+      display: block;
+      /* P.S: Use `!important` if missing `#content` (selector specificity). */
+    }
+  </style>
+  <header>
+    <a href="index.html" class="logo">
+      <img class="logo" src="/images/Logo.png" alt="Rainyday Logo" />
+    </a>
+    <div class="menu-items">
+      <label for="dropdown-menu">
+        <ion-icon name="menu-outline"></ion-icon>
+      </label>
+      <input type="checkbox" id="dropdown-menu" />
+      <nav>
         <ul>
-          <li><a href="/list-of-jackets.html">Woman</a></li>
-          <li><a href="/list-of-jackets.html">Men</a></li>
-          <li><a href="/list-of-jackets.html">Jackets</a></li>
-          <li><a href="/contact.html">Contact</a></li>
-          <li><a href="/about.html">About</a></li>
+          <li><a href="/list-of-jackets.html#men-jackets">men</a></li>
+          <li><a href="/list-of-jackets.html#woman-jackets">woman</a></li>
+          <li><a href="/list-of-jackets.html">jackets</a></li>
+          <li><a href="/contact.html">contact</a></li>
+          <li><a href="/about.html">about</a></li>
         </ul>
+      </nav>
+      <div class="nav_shop">
+        <a href="/shopping-cart.html">
+          <img class="shopping-cart" src="/images/icons/shopping-cart.png" alt="Your shopping cart" />
+        </a>
+        <span class="shoppingCardCounter"></span>
       </div>
-      <div class="social_links">
-        <div>
-          <a href="#">
-            <img
-              class="icons"
-              src="/images/icons/speech-bubble.png"
-              alt="Chat With Us"
-            />
-          </a>
-        </div>
-        <div>
-          <a href="#">
-            <img
-              src="/images/icons/facebook-logo.png"
-              alt="link to our facebook"
-              class="icons"
-            />
-          </a>
-        </div>
-        <div>
-          <a href="#">
-            <img
-              src="/images/icons/instagram.png"
-              alt="Our Instagram"
-              class="icons"
-            />
-          </a>
-        </div>
-      </div>
-      <div class="copyright">
-        <p>&#169; Josefine Holth Development 2021</p>
-      </div>
-    </footer>
-    <script src="js/components/display-shopping-cart.js"></script>
+    </div>
+  </header>
+  <main>
+    <section class="section">
+      <img class="product_img vertical-center" src="/images/product-images/woman-jackets/hiker-jacket-mirage.jpg"
+        alt="" />
+      <h1>Mirage Hiker Jacket</h1>
+      <p class="vertical-center">
+        You have order: <span class="orderCount"></span> jackets.
+      </p>
+      <p class="vertical-center">
+        Prize: <span class="checkout-price"></span> NOK
+      </p>
+      <div class="personal-info">
+        <form>
+          <section class="nameInfo content show">
+            <div>
+              <label for="first_name">First Name <span class="error_first_name error_style"></span></label>
+              <input type="text" id="first_name" name="first_name" />
+            </div>
 
-    <script src="js/checkout-cart.js"></script>
-    <!-- <script src="js/script.js"></script> -->
-  </body>
+            <div>
+              <label for="last_name">Last Name <span class="error_last_name error_style"></span></label>
+              <input type="text" id="last_name" name="last_name" />
+            </div>
+            <div>
+              <label for="phone_number">Phone number - 8 figure
+                <span class="error_phone_number error_style"></span></label>
+              <input type="tel" id="phone_number" name="phone_number" />
+            </div>
+          </section>
+          <button class="toggle_address button">Address Info</button>
+
+          <button class="toggle_name button" style="display: none;">Name info</button>
+          <section class="address_info content hide">
+            <div>
+              <label for="address">Address
+                <span class="error_address error_style error_style"></span></label>
+              <input type="text" id="address" name="address" />
+            </div>
+
+            <div class="city_code">
+              <div>
+                <label for="city">City <span class="error_city error_style"></span></label>
+                <input type="text" id="city" name="city" />
+              </div>
+              <div>
+                <label for="zip_code">ZIP Code - 4 figure <span class="error_zip_code error_style"></span></label>
+                <input type="number" id="zip_code" name="zip_code" />
+              </div>
+            </div>
+          </section>
+          <button class="toggle_delivery_info button">Delivery Options</button>
+
+          <section class="delivery_options content hide">
+            <p class="error_delivery error_style error_style"></p>
+            <div class="delivery_option vertical-center">
+              <div class="delivery_option_text">
+                <p>To The Store Nearby (0,00)</p>
+                <p>Rema 1000 Oslo, Norway 9090, Osloveien 01</p>
+              </div>
+              <div class="delivery_logo">
+                <img class="logo_img" src="/images/postenlogo.png" alt="Delivery with Posten Norway" />
+
+                <label for="delivery-Posten-Norway"></label>
+                <input type="checkbox" id="delivery-Posten-Norway" name="delivery-Posten-Norway" />
+              </div>
+            </div>
+            <div class="delivery_option vertical-center">
+              <div class="delivery_option_text">
+                <p>Pick-Up-Point (40,00)</p>
+                <p>Pick-Up-Point Oslo, Norway 9090, Osloveien 100</p>
+              </div>
+              <div class="delivery_logo">
+                <img src="/images/Logo.png" alt="Delivery with Posten Norway" />
+
+                <label for="delivery-pick-up-point"></label>
+                <input type="checkbox" id="delivery-pick-up-point" name="delivery-pick-up-point" />
+              </div>
+            </div>
+          </section>
+          <button class="toggle_payment_info button">Payment options</button>
+
+          <section class="payment_info content hide">
+            <img class="vertical-center" src="/images/visa_card.png" alt="Card info" />
+            <div class="cardin_info">
+              <div>
+                <label for="card_number">Card Number - 4 numbers<span
+                    class="error_card_number error_style"></span></label>
+                <input type="number" id="card_number" name="card_number" />
+              </div>
+              <div>
+                <label for="expiration_date">Expiration date DD/MM/YY
+                  <span class="error_expire_date error_style"></span></label>
+                <input type="number" id="expiration_date" name="expiration_date" />
+              </div>
+              <div>
+                <label for="cvc_number">CVC - 4 figure<span class="error_cvc error_style"></span></label>
+                <input type="number" id="cvc_number" name="cvc_number" />
+              </div>
+            </div>
+            <label for="cardholder_name">Card holder name
+              <span class="error_cardholder_name error_style"></span></label>
+            <input type="text" id="cardholder_name" name="cardholder_name" />
+            <div></div>
+            <input class="payment button" button vertical-center" type="submit" value="Finish your purchase" />
+          </section>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div>
+      <img class="logo" src="/images/RainyDays_Logo_white.png" alt="Rainydays white logo" />
+    </div>
+    <div class="links">
+      <ul>
+        <li><a href="/list-of-jackets.html">Woman</a></li>
+        <li><a href="/list-of-jackets.html">Men</a></li>
+        <li><a href="/list-of-jackets.html">Jackets</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+        <li><a href="/about.html">About</a></li>
+      </ul>
+    </div>
+    <div class="social_links">
+      <div>
+        <a href="#">
+          <img class="icons" src="/images/icons/speech-bubble.png" alt="Chat With Us" />
+        </a>
+      </div>
+      <div>
+        <a href="#">
+          <img src="/images/icons/facebook-logo.png" alt="link to our facebook" class="icons" />
+        </a>
+      </div>
+      <div>
+        <a href="#">
+          <img src="/images/icons/instagram.png" alt="Our Instagram" class="icons" />
+        </a>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>&#169; Josefine Holth Development 2021</p>
+    </div>
+  </footer>
+  <script src="js/components/display-shopping-cart.js"></script>
+
+  <script src="js/checkout-cart.js"></script>
+  <!-- <script src="js/script.js"></script> -->
+</body>
+
 </html>
