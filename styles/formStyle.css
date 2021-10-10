@@ -2,9 +2,12 @@
   display: none;
 }
 .content.show {
-  display: block; /* P.S: Use `!important` if missing `#content` (selector specificity). */
+  display: block;
 }
 
 .content.hide {
   display: none;
+}
+.error_style {
+  color: red;
 }

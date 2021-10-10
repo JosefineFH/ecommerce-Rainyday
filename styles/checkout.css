@@ -2,7 +2,6 @@ a {
   text-decoration: none;
 }
 
-/* ----------------------------------- .. ----------------------------------- */
 .section {
   display: grid;
   justify-content: center;
@@ -106,7 +105,6 @@ input[type="tel"]:focus {
 @media screen and (min-width: 600px) {
   .button {
     width: 200px;
-    /* height: 50px; */
     padding: 10px 0;
     font-size: 1.5rem;
   }

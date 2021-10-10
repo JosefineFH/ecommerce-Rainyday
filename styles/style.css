@@ -197,7 +197,6 @@ button,
   cursor: pointer;
   border-radius: 20px;
   width: 180px;
-  /* height: 35px; */
   text-transform: uppercase;
   border: 2px solid var(--orange-color);
   background: linear-gradient(145deg, #f24927, #cb3d20);
@@ -522,7 +521,6 @@ label::after {
   justify-content: space-around;
   max-width: 800px;
   margin: 20px auto;
-  /* align-items: center; */
 }
 .button.button {
   margin-top: unset;
@@ -550,4 +548,26 @@ label::after {
 }
 .shoppingCartMessage a {
   text-decoration: underline;
+}
+.product_img {
+  width: 300px;
+}
+.button-counter {
+  display: grid;
+  grid-template-columns: 50px 20px 50px;
+  align-items: center;
+  justify-content: center;
+}
+.plussButton,
+.minusButton {
+  max-width: 30px;
+  height: 40px;
+  border-radius: 0;
+  border: none;
+  font-size: unset;
+  margin: auto;
+  padding: unset;
+}
+#sections{
+  margin-top: 7pc;
 }

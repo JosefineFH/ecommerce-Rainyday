@@ -75,7 +75,7 @@ function nameValidationCheck() {
     } else {
         errorPhoneNumber.style.display = "none"
     }
-    if (lengthCheck(firstName.value, 0) === true && lengthCheck(lastName.value, 0) === true && lengthCheck(phoneNumber.value, 8) === true) {
+    if (lengthCheck(firstName.value, 0) === true && lengthCheck(lastName.value, 0) === true && lengthCheck(phoneNumber.value, 7) === true) {
         nameinfo.style.display = "none"
         addressInfo.style.display = "unset"
         deliveryOptions.style.display = "none"
@@ -203,9 +203,6 @@ function checkoutValidation(event) {
 
 form.addEventListener("submit", checkoutValidation);
 
-/* -------------------------------------------------------------------------- */
-/*                              Validation rules                              */
-/* -------------------------------------------------------------------------- */
 function emailValidation(email) {
     const symbols = /\S+@\S+\.\S+/;
     const pattern = symbols.test(email);
