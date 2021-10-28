@@ -1,6 +1,6 @@
 // console.log("jacets script - rest api call")
 
-const url = "http://josefineholth.one/wp-json/wc/store/products?per_page=100";
+const url = "https://josefineholth.one/wp-json/wc/store/products?per_page=100";
 
 const weRecommend = document.querySelector(".we_recommend")
 const womansJackets = document.querySelector(".ladies_jackets")
