@@ -7,9 +7,11 @@ const womansJackets = document.querySelector(".ladies_jackets")
 const mensJackets = document.querySelector(".mens-jackets");
 const onSale = document.querySelector(".on_sale")
 
-const discoundIcon = document.querySelector(".discound-icon");
+const discoundIcon = document.querySelector(".discount-icon");
 
 const productCardSetId = document.querySelector(".product_card")
+
+
 
 // let onsale;
 let tagsSlug;
@@ -26,8 +28,8 @@ fetch(url)
                 if (tagsSlug === "recommended") {
                     weRecommend.innerHTML += `
                     <article class="product_card">
-                    <a href="/specific-jacket-page.html">
-                    <div class="discound-icon">
+                    <a href="/specific-jacket-page.html?id=${products[i].id}">
+                    <div class="discount-icon">
                     
                     </div>
                     <img src="${products[i].images[0].src}" alt="Hiker W Jacket Woman Mirage">
@@ -41,8 +43,8 @@ fetch(url)
                 if (tagsSlug === "recommended-woman") {
                     womansJackets.innerHTML += `
                     <article class="product_card">
-                    <a href="/specific-jacket-page.html">
-                    <div class="discound-icon">
+                    <a href="/specific-jacket-page.html?id=${products[i].id}">
+                    <div class="discount-icon">
                     
                     </div>
                     <img src="${products[i].images[0].src}" alt="Hiker W Jacket Woman Mirage">
@@ -52,10 +54,10 @@ fetch(url)
                     </article>`
                 }
 
-                if(tagsSlug === "recommended-men"){
+                if (tagsSlug === "recommended-men") {
                     mensJackets.innerHTML += ` <article class="product_card">
-                    <a href="/specific-jacket-page.html">
-                    <div class="discound-icon">
+                    <a href="/specific-jacket-page.html?id=${products[i].id}">                    
+                    <div class="discount-icon">
                     
                     </div>
                     <img src="${products[i].images[0].src}" alt="Hiker W Jacket Woman Mirage">
@@ -67,12 +69,12 @@ fetch(url)
                 }
 
             }
-            if(products[i].on_sale === true){
+            if (products[i].on_sale === true) {
                 console.log(products[i].on_sale)
 
                 onSale.innerHTML += ` <article class="product_card">
-                <a href="/specific-jacket-page.html">
-                <div class="discound-icon">
+                <a href="/specific-jacket-page.html?id=${products[i].id}">                
+                <div class="discount-icon">
                 
                 </div>
                 <img src="${products[i].images[0].src}" alt="Hiker W Jacket Woman Mirage">
@@ -82,14 +84,14 @@ fetch(url)
                 </article>`
             }
 
-            
+
         }
     })
-
+    .catch(error => {
+        console.log(error)
+    })
 
     // <img src="/images/icons/discount.png" alt="Get a discount">
-    /**
-     * Make a click funcktion to the product card.
-     * - Save the product ID in the localstorage
-     * - Get the id out on the product page
-     */
+/**
+ * Make whats on sale more visible for the user
+ */
