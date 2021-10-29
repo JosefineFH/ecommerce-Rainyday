@@ -1,6 +1,12 @@
-const queryString = document.location.search;
-const params = new URLSearchParams(queryString);
-const id = params.get("id");
+// console.log("jackets details")
+// // const queryString = document.location.search;
+// console.log(queryString)
+
+// // const params = new URLSearchParams(queryString);
+// console.log(params)
+
+// // const id = params.get("id");
+// console.log(id)
 
 
 
@@ -8,7 +14,7 @@ const url = `https://josefineholth.one/wp-json/wc/store/products/${id}`
 
 const productDetails = document.querySelector(".product_details");
 
-console.log(url)
+// console.log(url)
 
 async function getSingleJacketDetails(){
     try{
@@ -22,9 +28,9 @@ async function getSingleJacketDetails(){
         ${jacket.description}
       <h2 class="prise-card">${jacket.price_html}</h2>
         `
-        console.log(jacket.images[0].alt)
+        // console.log(jacket.images[0].alt)
     } catch (error){
-        console.log(error)
+        // console.log(error)
     }
 }
 getSingleJacketDetails();
