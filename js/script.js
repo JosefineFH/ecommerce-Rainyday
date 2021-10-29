@@ -43,10 +43,10 @@ function addToCart() {
                 newCount = retrieveProductCountAndId[i].count
                 newCount++
 
-                productCountAndId = [{
+                productCountAndId = {
                     "id": id,
                     "count": newCount
-                }]
+                }
                 retrieveProductCountAndId = retrieveProductCountAndId ? retrieveProductCountAndId.split(',') : [];
                 retrieveProductCountAndId.push(productCountAndId);
                 localStorage.setItem('productCountAndId', JSON.stringify(productCountAndId));
