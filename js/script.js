@@ -5,83 +5,55 @@ let productId = window.localStorage.getItem('productId');
 const addToCartButton = document.querySelector("#addToCart");
 const cartContent = document.querySelector(".overlay");
 const closeButton = document.querySelector("#closeWindow");
+const overlayContent = document.querySelector(".overlayContent")
 
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 const id = params.get("id");
 
-
-
-// console.log(productId)
-/* -------------------------------------------------------------------------- */
-/*                    Adds number to shopping card counter                    */
-/* -------------------------------------------------------------------------- */
 // console.log(shoppingCartStorage.length)
 function addToCart() {
-    if (shoppingCartStorage === null) {
-        shoppingCartStorage = 0;
-    } else {
-        shoppingCartStorage++;
-    }
-    
-    const retrieveProductCountAndId = JSON.parse(localStorage.getItem('productCountAndId'));
-    let count = 1
-    let productCountAndId = [{
-        "id": id,
-        "count": count
-    }]
-    if(retrieveProductCountAndId){
-        console.log("This exists")
-        console.log(retrieveProductCountAndId)
-        window.localStorage.setItem('productCountAndId', JSON.stringify(retrieveProductCountAndId));
-        let newCount;
-        
-        for(let i = 0; i < retrieveProductCountAndId.length; i++){
-            console.log(retrieveProductCountAndId[i].id)
-            if(retrieveProductCountAndId[i].id === id){
-                
-                newCount = retrieveProductCountAndId[i].count
-                newCount++
-
-                productCountAndId = {
-                    "id": id,
-                    "count": newCount
-                }
-                retrieveProductCountAndId = retrieveProductCountAndId ? retrieveProductCountAndId.split(',') : [];
-                retrieveProductCountAndId.push(productCountAndId);
-                localStorage.setItem('productCountAndId', JSON.stringify(productCountAndId));
-                console.log(true)
-            } else {
-                console.log(false)
-                productCountAndId.push(JSON.parse(localStorage.getItem('productCountAndId')));
-                localStorage.setItem('productCountAndId', JSON.stringify(productCountAndId))
-                
-            }
-        }
-        console.log(newCount)
-    } else {
-        console.log("this does not exist")
-        window.localStorage.setItem('productCountAndId', JSON.stringify(productCountAndId));
+    let items = {
+        jacketId: id
     }
 
+    cart = [];
 
-    // if (shoppingCartStorage === null) {
-    //     shoppingCartStorage = 0;
-    // } else {
-    //     shoppingCartStorage++;
-    //     // console.log(shoppingCartStorage);
-    // }
+    // Parse the serialized data back into an array of objects
+    cart = JSON.parse(localStorage.getItem('shoppingCartItems')) || [];
 
-    window.localStorage.setItem('itemsInShoppingCount', shoppingCartStorage);
-    // window.localStorage.setItem('productId', id);
+    // Push the new data (whether it be an object or anything else) onto the array
+    cart.push(items);
 
-    shoppingCartCounter.innerHTML = `${shoppingCartStorage}`;
+    // Re-serialize the array back into a string and store it in localStorage
+    localStorage.setItem('shoppingCartItems', JSON.stringify(cart));
+
+    shoppingCartCounter.innerHTML = cart.length;
+
 }
 
 shoppingCart.addEventListener("click", addToCart);
 
 function showCart() {
     cartContent.classList.toggle("show");
+
+    const url = `https://josefineholth.one/wp-json/wc/store/products/${id}`
+    fetch(url)
+    .then(response => response.json())
+    .then(data => {
+        let product = data
+        console.log(product)
+        overlayContent.innerHTML = `
+        <img class="product-img" src="${product.images[0].src}" alt="${product.images[0].alt}"/>
+          <h4>${product.name}</h4>
+          <h4 class="prise-card">${product.prices.currency_symbol} ${product.prices.price}</h4>
+        `
+    })    
+    
+
+    /**
+     * Add so the data shows up her, img, name and price on the jacket. Use the api
+     */
 }
 addToCartButton.addEventListener("click", showCart);
 

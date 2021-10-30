@@ -1,13 +1,16 @@
-let shoppingCartStorage = window.localStorage.getItem('itemsInShoppingCount');
+// let shoppingCartStorage = window.localStorage.getItem('itemsInShoppingCount');
 let shoppingCartCounter = document.querySelector(".shoppingCardCounter");
+
+let cart = JSON.parse(localStorage.getItem('shoppingCartItems'));
 
 displayShoppingCartCount();
 function displayShoppingCartCount() {
 
-    if (shoppingCartStorage === null) {
-        shoppingCartStorage = 0;
+    if (cart === null) {
+        cart = 0;
 
     } else {
-        shoppingCartCounter.innerHTML = `${shoppingCartStorage}`;
+        // shoppingCartCounter.innerHTML = `${shoppingCartStorage}`;
+        shoppingCartCounter.innerHTML = cart.length;
     }
 }

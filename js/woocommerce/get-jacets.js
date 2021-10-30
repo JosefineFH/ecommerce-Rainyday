@@ -1,5 +1,3 @@
-// console.log("jacets script - rest api call")
-
 const url = "https://josefineholth.one/wp-json/wc/store/products?per_page=100";
 
 const weRecommend = document.querySelector(".we_recommend")
@@ -34,8 +32,7 @@ fetch(url)
                     </div>
                     <img src="${products[i].images[0].src}" alt="Hiker W Jacket Woman Mirage">
                     <h3> ${products[i].name}</h3>
-                    <p class="prise-card">${products[i].price_html}</p>
-                    ${products[i].id}
+                    <p class="prise-card">${products[i].prices.currency_symbol} ${products[i].prices.price}</p>
                     </a>
                     </article>`
                 }
@@ -49,7 +46,7 @@ fetch(url)
                     </div>
                     <img src="${products[i].images[0].src}" alt="Hiker W Jacket Woman Mirage">
                     <h3> ${products[i].name}</h3>
-                    <p class="prise-card">${products[i].price_html}</p>
+                    <p class="prise-card">${products[i].prices.currency_symbol} ${products[i].prices.price}</p>                    
                     </a>
                     </article>`
                 }
@@ -63,8 +60,7 @@ fetch(url)
                     <img src="${products[i].images[0].src}" alt="Hiker W Jacket Woman Mirage">
                     ${products[i].on_sale}
                     <h3> ${products[i].name}</h3>
-                    <p class="prise-card">${products[i].price_html}</p>
-                    </a>
+                    <p class="prise-card">${products[i].prices.currency_symbol} ${products[i].prices.price}</p>                    </a>
                     </article>`
                 }
 
@@ -79,19 +75,13 @@ fetch(url)
                 </div>
                 <img src="${products[i].images[0].src}" alt="Hiker W Jacket Woman Mirage">
                 <h3> ${products[i].name}</h3>
-                <p class="prise-card">${products[i].price_html}</p>
+                <p class="prise-card">${products[i].prices.currency_symbol} ${products[i].prices.price}</p>
                 </a>
                 </article>`
             }
-
 
         }
     })
     .catch(error => {
         console.log(error)
     })
-
-    // <img src="/images/icons/discount.png" alt="Get a discount">
-/**
- * Make whats on sale more visible for the user
- */
