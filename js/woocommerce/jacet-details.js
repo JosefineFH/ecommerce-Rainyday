@@ -9,7 +9,8 @@ async function getSingleJacketDetails() {
         const jacket = await response.json();
 
         productDetails.innerHTML += `
-        <img class="product-img" src="${jacket.images[0].src}" alt="${jacket.images[0].alt}">
+        <img class="product-img" src="${jacket.images[0].src}" 
+        alt="${jacket.images[0].alt}">
         <h1>${jacket.name}</h1>
         ${jacket.description}
       <h2 class="prise-card">${jacket.price_html}</h2>

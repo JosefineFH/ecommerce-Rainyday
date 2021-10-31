@@ -30,7 +30,7 @@ fetch(url)
                     <div class="discount-icon">
                     
                     </div>
-                    <img src="${products[i].images[0].src}" alt="Hiker W Jacket Woman Mirage">
+                    <img src="${products[i].images[0].src}" alt="${products[i].images[0].alt}">
                     <h3> ${products[i].name}</h3>
                     <p class="prise-card">${products[i].prices.currency_symbol} ${products[i].prices.price}</p>
                     </a>
@@ -44,7 +44,7 @@ fetch(url)
                     <div class="discount-icon">
                     
                     </div>
-                    <img src="${products[i].images[0].src}" alt="Hiker W Jacket Woman Mirage">
+                    <img src="${products[i].images[0].src}" alt="${products[i].images[0].alt}">
                     <h3> ${products[i].name}</h3>
                     <p class="prise-card">${products[i].prices.currency_symbol} ${products[i].prices.price}</p>                    
                     </a>
@@ -57,7 +57,7 @@ fetch(url)
                     <div class="discount-icon">
                     
                     </div>
-                    <img src="${products[i].images[0].src}" alt="Hiker W Jacket Woman Mirage">
+                    <img src="${products[i].images[0].src}" alt="${products[i].images[0].alt}">
                     ${products[i].on_sale}
                     <h3> ${products[i].name}</h3>
                     <p class="prise-card">${products[i].prices.currency_symbol} ${products[i].prices.price}</p>                    </a>
@@ -73,7 +73,7 @@ fetch(url)
                 <div class="discount-icon">
                 
                 </div>
-                <img src="${products[i].images[0].src}" alt="Hiker W Jacket Woman Mirage">
+                <img src="${products[i].images[0].src}" alt="${products[i].images[0].alt}">
                 <h3> ${products[i].name}</h3>
                 <p class="prise-card">${products[i].prices.currency_symbol} ${products[i].prices.price}</p>
                 </a>

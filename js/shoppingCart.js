@@ -26,46 +26,32 @@ function displayShoppingCart() {
         shoppingCart.classList.add("hide");
 
     } else {
-
-        // cart.sort(function (a, b) {
-        //     return a.jacketId - b.jacketId;
-        // });
-
         cartResult = [...cart.reduce((shoppingCart, id) => {
-            if (!shoppingCart.has(id.jacketId))
-                shoppingCart.set(id.jacketId, {
-                    ...id,
-                    count: 0
-                });
+                if (!shoppingCart.has(id.jacketId))
+                    shoppingCart.set(id.jacketId, {
+                        ...id,
+                        count: '0'
+                    });
 
-            shoppingCart.get(id.jacketId).count++;
-            return shoppingCart;
-        },
+                shoppingCart.get(id.jacketId).count++;
+                return shoppingCart;
+            },
             new Map
         ).values()];
-        console.log(cartResult)
-        let productName;
+
         for (var i in cartResult) {
             let jacketIds = cartResult[i].jacketId;
             let jacketIdsCount = cartResult[i].count
-            const url = `https://josefineholth.one/wp-json/wc/store/products/${cart[i].jacketId}`
-            
+            const url = `https://josefineholth.one/wp-json/wc/store/products/${jacketIds}`
+
             fetch(url)
-            .then(response => response.json())
-            .then(data => {
-                // console.log(jacketIdsCount)
-                let product = data;
-                // console.log(jacketIds)
-                // console.log(cartResult.jacketId)
-                    // console.log(product)
-                    console.log(typeof(cartResult[i].jacketId))
-                    console.log(typeof(product.id))
+                .then(response => response.json())
+                .then(data => {
+                    let product = data;
+
                     if (jacketIds == product.id) {
                         let price = product.prices.price * jacketIdsCount;
-                        console.log(product.name)
-                        console.log(jacketIdsCount)
-                        console.log(price)
-                        console.log(cartResult[i].jacketId)
+
                         shoppingCartSection.innerHTML += `
                         <img class="product_img vertical-center" src="${product.images[0].src}" alt="${product.images[0].alt}"/>
                         <div class="jacketInfo">
@@ -73,7 +59,7 @@ function displayShoppingCart() {
                         <div class="priceCount">
                           <div>
                             <p class="vertical-center">
-                            Prize: ${product.prices.currency_symbol}<span class="checkout-price"> ${product.prices.price} </span>
+                            Prize: ${product.prices.currency_symbol}<span class="checkout-price"> ${price} </span>
                             </p>
                           </div>
                           <div class="button-counter">
@@ -85,29 +71,16 @@ function displayShoppingCart() {
                         `
                     }
                     productName = product.name
-                    console.log(cartResult)
-
-                    // console.log(productName)
                 })
         }
 
-
-
         shoppingCartMessage.classList.add("hide");
-
-        
-        // count.innerHTML += `${totalPrice}`;
-        // jacketCount.innerHTML += `${cart}`;
     }
     if (cart === "0") {
         console.log("empty");
         minusButton.disabled = true;
         shoppingCart.classList.add("hide");
-
-    } else {
-        console.log("not empty")
     }
-
 }
 
 function emptyShoppingCart() {

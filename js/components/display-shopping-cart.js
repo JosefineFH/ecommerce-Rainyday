@@ -10,7 +10,6 @@ function displayShoppingCartCount() {
         cart = 0;
 
     } else {
-        // shoppingCartCounter.innerHTML = `${shoppingCartStorage}`;
         shoppingCartCounter.innerHTML = cart.length;
     }
 }
