@@ -1,4 +1,3 @@
-// let shoppingCartStorage = window.localStorage.getItem('itemsInShoppingCount');
 let shoppingCartCounter = document.querySelector(".shoppingCardCounter");
 
 let cart = JSON.parse(localStorage.getItem('shoppingCartItems'));
