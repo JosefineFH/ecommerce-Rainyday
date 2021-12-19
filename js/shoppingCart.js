@@ -5,47 +5,49 @@ const count = document.querySelector(".checkout-price");
 const emptyCart = document.querySelector(".emptyCart");
 const goToCheckout = document.querySelector(".goToCheckout");
 const shoppingCartSection = document.querySelector(".shoppingCartSection");
+const buttonSection = document.querySelector('.buttons')
+const shoppingCartCount = document.querySelector('.shoppingCardCounter')
 
 let jacketCount = document.querySelector(".storage-count");
 let minusButton;
 let cartResult;
 
-shoppingCartMessage.classList.add("hide");
 
-
-if (cart === null || cart === "0") {
-    shoppingCart.classList.add("hide");
+if (cart === null || cart === 0) {
+    buttonSection.style.display = 'none'
+    shoppingCartMessage.style.display = 'block';
 
 } else {
-cartResult = [...cart.reduce((shoppingCart, id) => {
-        if (!shoppingCart.has(id.jacketId))
-            shoppingCart.set(id.jacketId, {
-                ...id,
-                count: '0'
-            });
+    shoppingCartMessage.style.display = 'none';
+    cartResult = [...cart.reduce((shoppingCart, id) => {
+            if (!shoppingCart.has(id.jacketId))
+                shoppingCart.set(id.jacketId, {
+                    ...id,
+                    count: '0'
+                });
 
-        shoppingCart.get(id.jacketId).count++;
-        return shoppingCart;
-    },
-    new Map
-).values()];
+            shoppingCart.get(id.jacketId).count++;
+            return shoppingCart;
+        },
+        new Map
+    ).values()];
 
 
-for (var i in cartResult) {
-    let jacketIds = cartResult[i].jacketId;
-    let jacketIdsCount = cartResult[i].count;
+    for (var i in cartResult) {
+        let jacketIds = cartResult[i].jacketId;
+        let jacketIdsCount = cartResult[i].count;
 
-    const url = `https://josefineholth.one/wp-json/wc/store/products/${jacketIds}`
+        const url = `https://josefineholth.one/wp-json/wc/store/products/${jacketIds}`
 
-    fetch(url)
-        .then(response => response.json())
-        .then(data => {
-            let product = data;
+        fetch(url)
+            .then(response => response.json())
+            .then(data => {
+                let product = data;
 
-            if (jacketIds == product.id) {
-                let price = product.prices.price * jacketIdsCount;
+                if (jacketIds == product.id) {
+                    let price = product.prices.price * jacketIdsCount;
 
-                shoppingCartSection.innerHTML += `
+                    shoppingCartSection.innerHTML += `
             <img class="product_img vertical-center" src="${product.images[0].src}" alt="${product.images[0].alt}"/>
             <div class="jacketInfo">
             <h2>${product.name}</h2>
@@ -56,24 +58,43 @@ for (var i in cartResult) {
             </p>
             </div>
             <div class="button-counter">
-            <button class="minusButton" id="${product.id}">-</button>
-            <p class="storage-count">${jacketIdsCount}</p>
-            <button class="plussButton" id="${product.id}">+</button>
+            <button class="minusButton" id="${jacketIds}">-</button>
+            <p class="storage-count" id="${jacketIds}">${jacketIdsCount}</p>
+            <button class="plussButton" id="${jacketIds}">+</button>
             </div>
             </div>
             `
+                }
 
+                const countDisplay = document.querySelectorAll('.storage-count');
                 const minusButtonNodeList = document.querySelectorAll('.minusButton');
 
                 minusButtonNodeList.forEach(minusButtonNodeList => {
                     minusButtonNodeList.addEventListener('click', (event) => {
                         cart = JSON.parse(localStorage.getItem('shoppingCartItems')) || [];
-                        for (var i in cart) {
-                            let jacketId = event.target.id
-                            if (jacketId === cart[i].jacketId) {
-                                cart.findIndex(i => i.id === cart);
-                                cart.splice(i, 1);
-                                break;
+                        
+                        let buttonId = minusButtonNodeList
+                        let jacketId = event.target.id
+
+
+                        for (let c = 0; c < cartResult.length; c++) {
+                            if (buttonId.id === cartResult[c].jacketId) {
+                                for (let i in cart) {
+                                    
+                                    if (jacketId === cart[i].jacketId) {
+                                        cart.findIndex(i => i.id === cart)
+                                        cart.splice(i, 1)
+                                        cartResult[c].count--
+                                        countDisplay.forEach(element => {
+                                            if (element.id == cartResult[c].jacketId) {
+                                                
+                                                element.innerHTML = cartResult[c].count;
+                                                shoppingCartCount.innerHTML = cart.length
+                                            }
+                                        })
+                                        break;
+                                    }
+                                }
                             }
                         }
                         localStorage.setItem('shoppingCartItems', JSON.stringify(cart))
@@ -81,76 +102,68 @@ for (var i in cartResult) {
                 })
 
                 const plussButtonNodeList = document.querySelectorAll('.plussButton');
-
                 plussButtonNodeList.forEach(plussButtonNodeList => {
                     plussButtonNodeList.addEventListener('click', (event) => {
-                        console.log(plussButtonNodeList)
                         cart = JSON.parse(localStorage.getItem('shoppingCartItems')) || [];
-                        for (var i in cart) {
-                            let jacketId = event.target.id
-                            console.log(jacketId)
-                            if (jacketId === cart[i].jacketId) {
-                                console.log(jacketId)
-                                items = {
-                                    jacketId: jacketId
-                                }
-                                console.log(items)
-                                cart.push(items);
-                                break;
+                        let buttonId = plussButtonNodeList
+                        let jacketId = event.target.id
+
+                        for (let c = 0; c < cartResult.length; c++) {
+
+                            if (buttonId.id === cartResult[c].jacketId) {
+                                cartResult[c].count++
+                                countDisplay.forEach(element => {
+                                    if (element.id == cartResult[c].jacketId) {
+                                        element.innerHTML = cartResult[c].count;
+                                        shoppingCartCount.innerHTML = cart.length
+                                        items = {
+                                            jacketId: jacketId
+                                        }
+                                        cart.push(items);
+                                    }
+                                })
                             }
                         }
                         localStorage.setItem('shoppingCartItems', JSON.stringify(cart))
                     })
                 })
-            }
-        })
-}
+                let getPrice = document.querySelectorAll('.checkout-price')
+                goToCheckout.addEventListener("click", () => {
+                    let price = product.prices.price * jacketIdsCount;
+                    
+                    console.log(price.toString())
+                    
+                    window.localStorage.setItem('shoppingPrice', price);
+                    
+                });
+            })
+    }
 
 }
-// if (cart === "0") {
-//     console.log("empty");
-//     minusButton.disabled = true;
-//     shoppingCart.classList.add("hide");
-// }
+if (cart === "0") {
+    
+    minusButton.disabled = true;
+    shoppingCart.classList.add("hide");
+}
 
 
-// function emptyShoppingCart() {
-//     console.log("empty");
-//     localStorage.clear();
-//     location.reload();
-// }
-// emptyCart.addEventListener("click", emptyShoppingCart);
+function emptyShoppingCart() {
+    
+    localStorage.clear();
+    location.reload();
+}
+emptyCart.addEventListener("click", emptyShoppingCart);
 
-
-// const plussButton = document.querySelectorAll(".plussButton");
-
-// function pluss() {
-//     cart++;
-
-//     window.localStorage.setItem('itemsInShoppingCount', cart);
-//     jacketCount.innerHTML = `${cart}`
-
-//     location.reload();
-// }
-// // plussButton.addEventListener("click", pluss);
-
-
-// function minus() {
-//     console.log(jacketIds)
-//     console.log("minus");
-//     shoppingCartItemStorage--;
-
-//     // window.localStorage.setItem('itemsInShoppingCount', cart);
-//     jacketCount.innerHTML = `${cart}`
-
-//     location.reload();
-// }
-// // minusButton.addEventListener("click", minus);
 
 // function goToCheckoutPage() {
-//     console.log("you are now checking out");
-//     console.log(totalPrice)
-//     window.localStorage.setItem('shoppingPrice', totalPrice);
+//     let price = document.querySelectorAll('.checkout-price')
+//     price.forEach(totalPrice => {
+
+//         console.log(totalPrice)
+
+//         window.localStorage.setItem('shoppingPrice', totalPrice);
+//     })
+    
 // }
 // setTimeout(goToCheckoutPage, 3000);
 // goToCheckout.addEventListener("click", goToCheckoutPage);

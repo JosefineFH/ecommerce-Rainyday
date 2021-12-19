@@ -571,6 +571,12 @@ label::after {
   margin: auto;
   padding: unset;
 }
+.plussButton{
+  border-radius: 0% 20% 20% 0%;;
+}
+.minusButton{
+  border-radius: 20% 0% 0% 20%;;
+}
 #sections{
   margin-top: 7pc;
 }
